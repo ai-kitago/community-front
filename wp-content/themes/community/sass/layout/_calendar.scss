@@ -1,0 +1,264 @@
+.calendar-result {
+    float: left;
+}
+.calendar-tag {
+    text-align: right;
+    float: right;
+}
+
+.calendar {
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid $border;
+    display: table;
+    .month-box {
+        border-bottom: 1px solid $border;
+        display: table-row;
+        &:last-of-type {
+            border-bottom: none;
+            .day-box {
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
+        .ym {
+            width: 70px;
+            padding: 20px 0;
+            text-align: center;
+            line-height: 1.2;
+            border-right: 1px solid $border;
+            vertical-align: top;
+            display: table-cell;
+            position: relative;
+            p {
+                width: inherit;
+                position: absolute;
+                &.fixed {
+                    position: fixed;
+                }
+            }
+            .month {
+                display: block;
+                bold {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    .day-box {
+        width: auto;
+        border-bottom: 1px solid $border;
+        display: inline-table;
+        .dw {
+            width: 70px;
+            padding: 20px 0;
+            text-align: center;
+            line-height: 1.2;
+            border-right: 1px solid $border;
+            vertical-align: top;
+            display: table-cell;
+            position: relative;
+            p {
+                width: inherit;
+                margin-top: 19px;
+                position: absolute;
+                &.fixed {
+                    position: fixed;
+                }
+            }
+            .day {
+                font-size: 32px;
+            }
+            .week {
+                display: block;
+            }
+            &.week-6 {
+                .day,.week {
+                    color: #6991AB;
+                }
+            }
+            &.week-0 {
+                .day,.week {
+                    color: #BB6F5D;
+                }
+            }
+        }
+    }
+    .program-box {
+        width: auto;
+        padding: 20px;
+        border-bottom: 1px dashed $border;
+        //vertical-align: middle;
+        //display: table-cell;
+        a {
+            color: $gray;
+            display: block;
+            .calendar-thumbnail {
+                width: 20%;
+                vertical-align: middle;
+                display: table-cell;
+            }
+            .calendar-content {
+                padding-left: 20px;
+                vertical-align: middle;
+                display: table-cell;
+                h3 {
+                    margin-bottom: 10px;
+                }
+                .place {
+                    .label {
+                        margin-right: 5px;
+                        padding: 5px 10px;
+                        color: $white;
+                        background: $event;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .not-find{
+        padding: 40px 0;
+        p {
+            
+        }
+    }
+}
+
+@media screen and (max-width:$sp-width){
+
+.calendar {
+    width: 100%;
+    margin-bottom: 30px;
+    border: 1px solid $border;
+    display: table;
+    .month-box {
+        padding-top: 50px;
+        border-bottom: 1px solid $border;
+        position: relative;
+        display: block;
+        &:last-of-type {
+            border-bottom: none;
+            .day-box {
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+        }
+        .ym {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.2;
+            border-right: none;
+            border-bottom: 1px solid $border;
+            background: $white;
+            vertical-align: top;
+            display: block;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            @include transform(translate3d(0px,0px,0px));
+            p {
+                //width: 100%;
+                padding: 0;
+                position: static;
+                
+            }
+            &.fixed {
+                width: auto;
+                position: fixed;
+                top: 0;
+            }
+            .month {
+                display: inline-block;
+                bold {
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+    .day-box {
+        width: 100%;
+        border-bottom: 1px solid $border;
+        display: inline-table;
+        .dw {
+            width: 50px;
+            padding: 10px 0;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.2;
+            border-right: 1px solid $border;
+            vertical-align: top;
+            display: table-cell;
+            position: relative;
+            p {
+                margin-top: 0;
+                @include transform(translate3d(0px,0px,0px));
+                &.fixed {
+                    position: fixed;
+                    top: 60px;
+                }
+            }
+            .day {
+                font-size: 23px;
+            }
+            .week {
+                display: block;
+            }
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .program-box {
+        width: auto;
+        padding: 10px;
+        border-bottom: 1px dashed $border;
+        //vertical-align: middle;
+        //display: table-cell;
+        a {
+            color: $gray;
+            display: block;
+            .calendar-thumbnail {
+                width: 100%;
+                vertical-align: middle;
+                display: block;
+            }
+            .calendar-content {
+                padding-left: 0;
+                vertical-align: middle;
+                display: block;
+                h3 {
+                    margin-bottom: 10px;
+                }
+                .place {
+                    font-size: 14px;
+                    .label {
+                        margin-right: 5px;
+                        padding: 5px 10px;
+                        color: $white;
+                        background: $event;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    .not-find{
+        padding: 30px 0;
+        p {
+            
+        }
+    }
+}
+
+}

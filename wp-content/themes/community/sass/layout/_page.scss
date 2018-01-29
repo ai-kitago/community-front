@@ -1,0 +1,71 @@
+.page-header {
+    position: relative;
+    &:before {
+        content: '';
+        $svg-gradient-shim-threshold: 1 !global;
+        @include background-image(linear-gradient(120deg, #2F268A, #A82288, #D80C18));
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include opacity(0.8);
+        .page-studio & {
+            @include background-image(linear-gradient(120deg, darken($studio,20%), lighten($studio,10%)));
+        }
+        .page-instructor &,
+        .single-list & {
+            @include background-image(linear-gradient(120deg, darken($instructor,20%), lighten($instructor,10%)));
+        }
+        .page-schedule &,
+        .page-event & {
+            @include background-image(linear-gradient(120deg, darken($event,20%), lighten($event,10%)));
+        }
+        .page-job & {
+            @include background-image(linear-gradient(120deg, darken($job,20%), lighten($job,10%)));
+        }
+    }
+    .single-list &,
+    .page-schedule & {
+        height: 86px;
+    }
+}
+
+.slick-header {
+    padding-top: 86px;
+    padding-bottom: 46px;
+    margin: auto;
+    overflow: hidden;
+    ul.slick-slider {
+        width: $site-width - ($col-padding * 2);
+        margin: auto;
+        li.slick-slide {
+            width: 50%;
+            padding: 0 10px;
+            float: left;
+            a {
+                overflow: hidden;
+                display: block;
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include transition(all 0.5s ease-in-out);
+                    @include transform(scale(1.0));
+                    @include backface-visibility(hidden);
+                    &:hover {
+                       @include transform(scale(1.02));
+                       @include opacity(0.8);
+                    }
+                }
+            }
+        }
+        ul.slick-dots {
+            bottom: -35px;
+            li {
+                margin: 0 2px;
+            }
+        }
+    }
+}

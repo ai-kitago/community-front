@@ -1,0 +1,77 @@
+.license-tag{
+    list-style-type: none;
+    display: inline-block;
+}
+
+.license-tag li{
+    float: left;
+}
+
+.license-tag li a{
+    color: #fff;
+    display: block;
+    background: #f40c81;
+    text-decoration: none;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 5px;
+    text-align: center;
+    margin-right: 23px;
+}
+
+.license-tag li:nth-child(even) a:before{
+    border-left-color: transparent;
+}
+
+.license-tag li:first-child a{
+    padding-left: 15px;
+    border-radius: 4px 0 0 4px;
+}
+
+.license-tag li:first-child a:before{
+    border: none;
+}
+
+.license-tag li:last-child a{
+    padding-right: 15px;
+    border-radius: 0 4px 4px 0;
+}
+
+.license-tag li:last-child a:after{
+    border: none;
+}
+
+.license-tag li a:before, .license-tag li a:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    border: 0 solid #f40c81;
+    border-width: 20px 10px;
+    width: 0;
+    height: 0;
+}
+
+.license-tag li a:before{
+    left: -20px;
+    border-left-color: transparent;
+}
+
+.license-tag li a:after{
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #f40c81;
+}
+
+.license-tag li a:hover{
+    background: #7dd49a;
+}
+
+.license-tag li a:hover:before{
+    border-color: #7dd49a;
+    border-left-color: transparent;
+}
+
+.license-tag li a:hover:after{
+    border-left-color: #7dd49a;
+}

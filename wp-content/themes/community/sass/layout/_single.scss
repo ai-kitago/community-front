@@ -1,0 +1,229 @@
+.single-header {
+    height: 85px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.single-header {
+    .single-studio &,
+    .single-event & {
+        height: 700px;
+        background-size: cover;
+        position: relative;
+    }
+    .single-license & {
+        @include background-image(linear-gradient(120deg, darken($license,20%), lighten($license,10%)));
+    }
+    .single-instructor & {
+        @include background-image(linear-gradient(120deg, darken($instructor,20%), lighten($instructor,10%)));
+    }
+}
+
+@media screen and (max-width:$pad-width){
+
+.single-header {
+    background-attachment: scroll;
+}
+
+}
+
+.single-logo {
+    width: 120px;
+    height: 120px;
+    margin-left: -60px;
+    border: 1px solid $border;
+    position: absolute;
+    left: 50%;
+    bottom: -60px;
+}
+
+.content-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+body.single-event,
+body.single-license,
+body.single-instructor,
+body.single-studio {
+    .entry-section {
+        padding: 60px 0;
+        &:nth-of-type(odd){
+            background: $section-bg;
+        }
+    }
+    .entry-header {
+        padding: 30px 0 0;
+        text-align: center;
+        //background: $section-bg;
+    }
+    .entry-content {
+        margin-bottom: 40px;
+    }
+    .category-name {
+        margin-bottom: 20px;
+        display: block;
+    }
+    .entry-title {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .entry-company-name {
+        margin-bottom: 30px;
+    }
+    .entry-description {
+        margin-bottom: 30px;
+    }
+    .entry-subname {
+        margin-bottom: 30px;
+    }
+    .entry-profile {
+        white-space: pre-wrap;
+    }
+    .entry-tel {
+        //margin-bottom: 30px;
+        a {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1;
+            color: $gray;
+            border: 1px solid $border;
+            @include border-radius(50px);
+            display: inline-block;
+        }
+    }
+    article {
+        h4 {
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 110%;
+            font-weight: bold;
+            border-bottom: 1px solid;
+            span {
+                padding-bottom: 6px;
+                border-bottom: 3px solid;
+            }
+        }
+    }
+}
+
+.gallery-ul {
+    margin-bottom: 40px;
+    font-size: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.gallery-li {
+    width: 16.66666%;
+    display: inline-block;
+    //float: left;
+    * {
+        display: block;
+        outline: none;
+    }
+}
+
+.detail-table {
+    td,th {
+        padding: 15px;
+    }
+    th {
+        min-width: 150px;
+        font-weight: bold;
+        vertical-align: top;
+    }
+}
+
+.tag {
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: $white;
+    background: $gray;
+    display: inline-block;
+    @include border-radius(50px);
+}
+
+#gpsearch-map {
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+.entry-news {
+    width: 720px;
+    margin: auto;
+    ul {
+        li {
+            padding: 20px 15px;
+            border-bottom: 1px solid $border;
+            cursor: pointer;
+            @include transition-duration(0.5s);
+            &:hover {
+                //background: rgba(255,255,255,0.2);
+                @include opacity(0.8);
+            }
+        }
+    }
+    .news-title {
+        padding: 0 50px 0 0;
+        font-weight: bold;
+    }
+    .news-content {
+        padding: 15px;
+        margin-top: 15px;
+        background: $section-bg;
+        @include border-radius(4px);
+        display: none;
+    }
+}
+
+.company-table {
+    //margin: auto;
+    th,td {
+        //width: 50%;
+        padding: 10px 20px;
+        vertical-align: top;
+    }
+    th {
+        font-weight: bold;
+        border-right: 1px solid $border;
+        //text-align: right;
+    }
+    td {
+        //text-align: left;
+    }
+}
+
+@media screen and (max-width:$sp-width){
+
+.single-header {
+    height: 60px;
+    &.single-event,
+    &.single-studio {
+        height: 400px;
+    }
+}
+
+.single-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: -40px;
+    bottom: -40px;
+}
+
+.detail-table {
+    td,th {
+        padding: 15px;
+    }
+    th {
+        min-width: auto;
+        white-space: nowrap;
+    }
+}
+
+}

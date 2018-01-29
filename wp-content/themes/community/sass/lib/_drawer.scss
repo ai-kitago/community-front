@@ -1,0 +1,43 @@
+body.drawer--right {
+
+.drawer-hamburger {
+    padding: 19px .75rem 30px;
+    position: static;
+    float: left;
+    //top: 14px;
+    //right: 30px;
+    .drawer-hamburger-icon {
+        height: 1px;
+        background-color: $white;
+        &:before,
+        &:after {
+            height: 1px;
+            background-color: $white;
+        }
+    }
+}
+
+.drawer-nav {
+    color: $white;
+    background: $dark;
+}
+
+}
+
+body.drawer-open {
+
+.drawer-hamburger {
+    position: fixed;
+    right: 15px !important;
+    .drawer-hamburger-icon {
+        background-color: transparent;
+        background-color: $gray;
+        &:before,
+        &:after {
+            height: 1px;
+            background-color: $gray;
+        }
+    }
+}
+
+}

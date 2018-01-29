@@ -1,0 +1,130 @@
+.block {
+    height: 100%;
+    min-height: 100%;
+    //margin-bottom: 30px;
+    background: $white;
+    border: 1px solid $border;
+    .block-thumbnail {
+        .block-image {
+            
+        }
+    }
+    .block-meta {
+        margin-bottom: 5px;
+        font-size: 12px;
+        .block-pref {
+            float: right;
+        }
+    }
+    .block-label {
+        padding: 2px 5px;
+        margin-right: 5px;
+        border: 1px solid;
+    }
+    .block-content {
+        padding: 10px;
+    }
+    .block-title {
+        margin-bottom: 10px;
+        color: $gray;
+        span {
+            margin-left: 10px;
+        }
+    }
+    .block-footer {
+        font-size: 12px;
+        @include pie-clearfix;
+        .block-date {
+            float: right;
+        }
+    }
+}
+
+.block-category {
+    border-left: 1px solid $white;
+    border-bottom: 1px solid $white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    a {
+        padding: 5px;
+        font-size: 12px;
+        line-height: 1;
+        display: block;
+    }
+    .instructor & {
+        a {
+            color: $white;
+            background: $instructor;
+        }
+    }
+}
+
+.instructor-block {
+    height: 100%;
+    min-height: 100%;
+    background: $white;
+    border: 1px solid $border;
+    position: relative;
+    display: grid;
+    .block-thumbnail {
+        
+    }
+    .block-content {
+        padding: 10px;
+        text-align: center;
+    }
+    .block-title {
+        //margin-bottom: 10px;
+        color: $gray;
+        span {
+            font-size: 12px;
+            display: block;
+        }
+    }
+}
+
+.license-block {
+    border: 1px solid $border;
+    a {
+        width: 100%;
+        padding: 10px 0;
+        color: $gray;
+        display: table;
+    }
+    .block-thumbnail {
+        width: 80px;
+        text-align: center;
+        border-right: 1px solid $border;
+        vertical-align: middle;
+        display: table-cell;
+        .fa {
+            font-size: 28px;
+        }
+    }
+    .block-content {
+        padding-left: 15px;
+        vertical-align: middle;
+        display: table-cell;
+        .block-parent,
+        .block-child {
+            display: inline-block;
+        }
+        .block-parent {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .block-title {
+
+        }
+        .block-date {
+            //font-size: 12px;
+        }
+        .block-description {
+            font-size: 12px;
+            .license-shop-name {
+                margin-right: 10px;
+            }
+        }
+    }
+}

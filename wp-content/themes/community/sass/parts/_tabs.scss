@@ -1,0 +1,138 @@
+.tabs {
+    .tabs-ul {
+        //margin-bottom: 10px;
+        //@include pie-clearfix;
+        .tabs-li {
+            width: 50%;
+            float: left;
+            a {
+                width: 100%;
+                padding: 10px;
+                font-weight: bold;
+                text-align: center;
+                color: $gray;
+                //border: 1px solid $border;
+                display: block;
+                &:link,
+                &:hover,
+                &:focus,
+                &:visited,
+                &:active {
+                    outline: none;
+                }
+            }
+            &.ui-tabs-active {
+                a {
+                    color: $white;
+                    //border: 1px solid $gray;
+                    background: $gray;
+                }
+            }
+            &:first-child {
+                a {
+                    //@include border-radius(4px 0 0 0);
+                }
+            }
+            &:last-child {
+                a {
+                    //@include border-radius(0 4px 0 0);
+                }
+            }
+        }
+    }
+    
+    .tab-content {
+        padding: 10px;
+        background: $white;
+    }
+}
+
+
+.ui-tabs {
+    position: initial;
+    padding: initial;
+    .ui-tabs-nav {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            position: relative;
+            top: 0;
+            margin: initial;
+            border-bottom-width: 0;
+            padding: 0;
+            white-space: nowrap;
+        }
+        li.ui-tabs-active {
+            margin-bottom: initial;
+            padding-bottom: initial;
+        }
+    }
+}
+
+.ui-widget {
+    font-family: initial;
+    font-size: initial;
+}
+
+.ui-widget-content {
+    border: initial;
+    background: initial;
+    color: $gray;
+}
+
+.ui-widget {
+    &.ui-widget-content {
+        margin-bottom: 20px;
+        border: 1px solid $border;
+        @include border-radius(4px 4px 0 0);
+    }
+    
+}
+
+.ui-widget-header {
+    border: initial;
+    background: initial;
+    color: initial;
+    font-weight: initial;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+    border-bottom-right-radius: initial;
+}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+    border-bottom-left-radius: initial;
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+    border-top-right-radius: initial;
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+    border-top-left-radius: initial;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    border: initial;
+    background: initial;
+    font-weight: initial;
+    color: initial;
+}

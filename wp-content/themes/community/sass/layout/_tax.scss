@@ -1,0 +1,117 @@
+.tax-header {
+    position: relative;
+    &:before {
+        content: '';
+        $svg-gradient-shim-threshold: 1 !global;
+        @include background-image(linear-gradient(120deg, #2F268A, #A82288, #D80C18));
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include opacity(0.8);
+        .tax-area & {
+            @include background-image(linear-gradient(120deg, darken($studio,20%), lighten($studio,10%)));
+        }
+    }
+    .header-box {
+        padding: 166px 0 0;
+    }
+}
+
+.tax-title {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    color: $white;
+}
+
+.slick-tax {
+    padding-top: 86px;
+    padding-bottom: 30px;
+    margin: auto;
+    //overflow: hidden;
+    ul.slick-slider {
+        //width: $site-width - ($col-padding * 2);
+        margin: auto;
+        li.slick-slide {
+            width: 100%;
+            padding: 0 10px;
+            float: left;
+            a {
+                overflow: hidden;
+                display: block;
+                img {
+                    width: 100%;
+                    height: auto;
+                    @include transition(all 0.5s ease-in-out);
+                    @include transform(scale(1.0));
+                    @include backface-visibility(hidden);
+                    &:hover {
+                       @include transform(scale(1.02));
+                       @include opacity(0.8);
+                    }
+                }
+            }
+        }
+        ul.slick-dots {
+            bottom: -35px;
+            li {
+                margin: 0 2px;
+            }
+        }
+    }
+}
+
+.panel-area {
+    .pref-ul {
+        
+    }
+    .pref-li {
+        //padding-bottom: 10px;
+        border-bottom: 1px solid $border;
+        .pref-title {
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+            
+        }
+        .pref-content {
+            padding: 10px;
+            display: none;
+        }
+    }
+}
+
+.line-box {
+    margin-bottom: 20px;
+}
+
+.line-ul {
+    //@include pie-clearfix;
+    .line-li {
+        border-bottom: 1px solid $border;
+        @include pie-clearfix;
+        .ui-accordion-header {
+            padding: 10px 0;
+            @include pie-clearfix;
+        }
+        .line-content {
+            padding: 15px;
+            //height: auto !important;
+            line-height: initial;
+            @include pie-clearfix;
+        }
+    }
+}
+
+.city-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    @include pie-clearfix;
+    .cntr {
+        //width: 33.333333%;
+    }
+}

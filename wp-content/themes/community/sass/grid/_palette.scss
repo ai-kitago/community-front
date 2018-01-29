@@ -1,0 +1,218 @@
+// default set
+$dark: #1E2022;
+$gray: #646261;
+$black: #000;
+$border: #e8e8e8;
+
+$base-border: #4d4d4d;
+$light-border: #a6a6a6;
+
+// theme set
+//$base: $black;
+
+$base: #646261;
+
+$gray-light: lighten(#646261,30%);
+
+$section-bg: #F9F9F9;
+
+//$primary: #ff475f;
+//$secondary: #0b003f;
+//$base: $black;
+
+// 青バージョン
+//$primary: #da7b7f;
+//$secondary: #727e9d;
+
+// 緑バージョン
+$primary: #E77671;
+$secondary: #7BB3B3;
+
+// 黄色バージョン
+//$primary: #DA7B7F;
+//$secondary: #FCC070;
+
+$third: #e7e5e1;
+
+$white: #fff;
+$brown: #736357;
+$red: #C1272D;
+$blue: #0000CD;
+$green: #009245;
+
+$lightgray: #fcfcfc;
+
+$label: #998675;
+
+$studio: #EFB663;
+$event: #46AF93;
+$instructor: #468FAF;
+$job: #AF4646;
+$company: #5D536A;
+$access: #C05FAC;
+$license: #FF7A61;
+
+$senior: #cc6600;
+$anatomy: #2a0967;
+$oriental: $gray;
+$workshop: #054b6b;
+$teaching: #8c0051;
+
+$column: #7fc7b1;
+$voice: #8e8cc3;
+$blog: #fe8f8f;
+$camp: #fbd124;
+$participant: #ffbf7f;
+
+
+
+
+@font-face {
+    src: local('Gilda Display'), local('GildaDisplay-Regular'), url(http://fonts.gstatic.com/s/gildadisplay/v4/8yAVUZLLZ3wb7dSsjix0CIuYPqUiS7rpomiMbHCjpwk.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    src: local('Gilda Display'), local('GildaDisplay-Regular'), url(http://fonts.gstatic.com/s/gildadisplay/v4/8yAVUZLLZ3wb7dSsjix0CKGIZXskR4vs9Z8Ks0Pl5Mg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+    font-family: "ipMincyo";
+    src: url("fonts/ipaexm.eot?") format("eot"), url("fonts/ipaexm.woff2") format("woff2"), url("fonts/ipaexm.woff") format("woff"), url("fonts/ipaexm.ttf") format("truetype");
+}
+
+$gilda: "Gilda Display";
+$century: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+$gothic: "Yu Gothic", YuGothic,"Helvetica", Verdana, Meiryo, "M+ 1p", sans-serif;
+$mincho: "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "ipMincyo", "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , "Noto Serif", serif;
+
+@mixin font-feature-settings( $value, $number, $moz: $experimental-support-for-mozilla, $webkit: $experimental-support-for-webkit, $o: $experimental-support-for-opera, $ms: $experimental-support-for-microsoft, $khtml: $experimental-support-for-khtml, $official: true,$property:font-feature-settings){
+@if $webkit and $experimental-support-for-webkit {
+-webkit-#{$property}: quote($value); }
+@if $khtml and $experimental-support-for-khtml {
+-khtml-#{$property}: quote($value=$number); }
+@if $moz and $experimental-support-for-mozilla {
+-moz-#{$property}: quote($value=$number); }
+@if $ms and $experimental-support-for-microsoft {
+-ms-#{$property}: quote($value); }
+@if $o and $experimental-support-for-opera {
+-o-#{$property}: quote($value); }
+@if $official {
+#{$property}: quote($value); } }
+
+$normal: 500;
+
+// カテゴリー配色
+$category-names: (
+    'report'
+    'voice'
+    'ryt'
+    'ws'
+    'tt'
+    'ss'
+    'favorite'
+);
+
+
+@function ColorHarmony($color, $arg...) {
+    $slice: 24;
+    $part: 360deg / $slice;
+    $diffs1: ();
+    $diffs2: ();
+    $val: ();
+    @each $j in $arg {
+        $diffs1: append($diffs1, $part * $j, comma);
+    }
+    @each $k in $arg {
+        $diffs2: join(360 + (- $part * $k) , $diffs2);
+    }
+    $diffs: join(0, join($diffs1, $diffs2));
+    @each $i in $diffs {
+        $val: append($val, adjust-hue($color, $i), comma);
+    }
+    @return $val;
+}
+
+// 隣接色相:色相差1(+-15deg)
+@function adjacentColor($color, $nth:null) {
+    $val: ColorHarmony($color, 1);
+    @if $nth==null {
+        @return $val;
+    }
+    @else {
+        @return nth($val, $nth);
+    }
+}
+
+// 類似色相:色相差2,3(+-30deg, +-45deg)
+@function analogyColor($color, $nth:null) {
+    $val: ColorHarmony($color, 2, 3);
+    @if $nth==null {
+        @return $val;
+    }
+    @else {
+        @return nth($val, $nth);
+    }
+}
+
+// 中差色相:色相差4,5,6,7(+-60deg 〜 +-105deg)
+@function intermediateColor($color, $nth:null) {
+    $val: ColorHarmony($color, 4, 5, 6, 7);
+    @if $nth==null {
+        @return $val;
+    }
+    @else {
+        @return nth($val, $nth);
+    }
+}
+
+// 対照色相:色相差8,9,10(+-120deg 〜 +-150deg)
+@function contrastColor($color, $nth:null) {
+    $val: ColorHarmony($color, 8, 9, 10);
+    @if $nth==null {
+        @return $val;
+    }
+    @else {
+        @return nth($val, $nth);
+    }
+}
+
+// 隣接補色色相:色相差11(+-165deg)
+@function split-complementaryColor($color, $nth:null) {
+    $val: ColorHarmony($color, 11);
+    @if $nth==null {
+        @return $val;
+    }
+    @else {
+        @return nth($val, $nth);
+    }
+}
+
+// 補色色相:色相差12(180deg)
+@function complementaryColor($color, $nth:null) {
+    $val: $color, complement($color);
+    @if $nth==null {
+        @return $val;
+    }
+    @else {
+        @return nth($val, $nth);
+    }
+}
+
+$base-color: #d73;
+$i: 1;
+
+.entry-category {
+    @each $category-name in $category-names {
+        .category-#{$category-name} {
+            background: intermediateColor($base-color, $i);
+            .entry-detail {
+                a {
+                    color: intermediateColor($base-color, $i);
+                }
+            }
+        }
+        $i: $i + 1;
+    }
+}

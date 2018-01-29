@@ -1,0 +1,16 @@
+.button-icon {
+    padding: 30px;
+    border: none;
+    background-size: 25px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon- {
+    &search {
+        background-image: url('images/icon/icon-search.svg');
+    }
+}

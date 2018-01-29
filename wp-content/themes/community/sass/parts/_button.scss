@@ -1,0 +1,141 @@
+.button {
+    //width: 100%;
+    padding: 10px;
+    color: $white;
+    background: $base;
+    border: none;
+    @include border-radius(4px);
+    //@include box-shadow(0 2px 10px #bbb);
+    font-family: $font-family;
+    //font-weight: bold;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    -webkit-appearance: none;
+    display: block;
+    &.button-md {
+        font-size: 18px;
+    }
+    &.button-sm {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+    &.button-lg {
+        padding: 12px;
+        font-size: 21px;
+    }
+    &.button-block {
+        width: 100%;
+    }
+    &.button-transparent {
+        background: transparent;
+    }
+    &.button-footer {
+        font-size: 18px;
+        color: $gray;
+        background: $white;
+        border: 1px solid $border;
+        small {
+            font-size: 14px;
+            display: block;
+        }
+    }
+    &.button-panel {
+        font-size: 18px;
+        color: $gray;
+        background: $white;
+        border: 1px solid $border;
+        small {
+            font-size: 14px;
+            display: block;
+        }
+    }
+    &.button-primary {
+        background: $primary;
+    }
+    &.button-white {
+        color: $gray;
+        background: $white;
+        //border: 1px solid $primary;
+    }
+    &.button-red {
+        background: $red;
+        //border: 1px solid $primary;
+    }
+    &.button-secondary {
+        color: $white;
+        background: $secondary;
+        //border: 1px solid $primary;
+    }
+    &.button-disable {
+        white-space: nowrap;
+    }
+    &.button-shadow {
+        @include box-shadow(0 2px 10px #bbb);
+        //@include text-shadow(0 1px 1px darken($primary,20%));
+        //@include box-shadow(0 1px 1px darken($primary,20%));
+        &:hover {
+            @include box-shadow(0 2px 20px #bbb);
+        }
+    }
+    &:hover {
+        @include opacity(0.9);
+    }
+    
+    @include transition(all 0.2s);
+
+    span {
+        margin: -5px 0 0 -5px;
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        background: $white;
+        @include border-radius(50%);
+        @include animation(clicklEffect 1s ease-out);
+    }
+    
+    @include keyframes(clicklEffect) {
+        from {
+            @include transform(scale(1));
+            @include opacity(0.3);
+        }
+        to {
+            @include transform(scale(100));
+            @include opacity(0.2);
+        }
+    }
+}
+
+.keyword-tag {
+    padding: 5px 10px;
+    min-width: initial;
+    line-height: 1.2;
+    @include box-shadow(0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12));
+    //border: 1px solid $border;
+    @include border-radius(10px);
+    cursor: pointer;
+    &:hover {
+        @include opacity(0.85);
+    }
+    i {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        font-family: initial;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        background: $gray;
+        vertical-align: text-bottom;
+        @include border-radius(100%);
+        display: inline-block;
+        &:before {
+            content: '×';
+            //margin-left: -2px;
+            color: $white;
+        }
+    }
+}

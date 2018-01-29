@@ -1,0 +1,25 @@
+.site-content {
+    padding-top: 86px;
+    .home &,
+    .single &,
+    .page-studio &,
+    .page-instructor &,
+    .single-list &,
+    .page-schedule &,
+    .page-event &,
+    .page-job &,
+    .tax-area & {
+        padding-top: 0;
+    }
+}
+
+.latest-title {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    span {
+        padding-bottom: 5px;
+        border-bottom: 3px solid;
+    }
+}

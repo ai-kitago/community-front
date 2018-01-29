@@ -1,0 +1,135 @@
+input,
+select,
+option,
+button {
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: $normal;
+}
+
+.input-field {
+    width: 100%;
+    height: 42px;
+    padding: 9px 10px 7px;
+    border: 1px solid $border;
+    @include border-radius(4px);
+    &:focus {
+        //@include border-radius(4px);
+        .studio & {
+            outline: 1px solid $studio;
+        }
+    }
+}
+select.input-field {
+    padding: 8px 10px 11px;
+}
+
+.search-control {
+    padding: 15px 0 25px;
+    @include background-image(linear-gradient(120deg, lighten($border,2%), lighten($border,4%)));
+    .page-event & {
+        @include background-image(linear-gradient(120deg, lighten($border,2%), lighten($border,4%)));
+        //@include background-image(linear-gradient(120deg, darken($event,20%), lighten($event,10%)));
+    }
+    @include pie-clearfix;
+    .field-group {
+        width: 23%;
+        padding: 0 10px;
+        float: left;
+    }
+    .field-button {
+        width: 8%;
+        padding: 0 10px;
+        float: left;
+    }
+    .button {
+        padding: 8px 10px;
+        .page-instructor &,
+        .single-list & {
+            background: $instructor;
+        }
+        .page-event &,
+        .page-schedule & {
+            background: $event;
+        }
+        .page-job & {
+            background: $job;
+        }
+    }
+    label {
+        //color: $white;
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+
+$label: $studio;
+
+/* css checkbox01 */
+.checkbox-input {
+    display: none;
+}
+.checkbox-parts {
+    padding-left: 20px;
+    position: relative;
+    //margin-right: 20px;
+}
+.checkbox-parts::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $border;
+    border-radius: 4px;
+}
+.checkbox-input:checked + .checkbox-parts {
+    color: $label;
+}
+.checkbox-input:checked + .checkbox-parts::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    width: 7px;
+    height: 14px;
+    transform: rotate(40deg);
+    border-bottom: 3px solid $label;
+    border-right: 3px solid $label;
+}
+
+
+.cntr {
+    width: 25%;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    float: left;
+    span {
+        font-size: 90%;
+        line-height: 1.3;
+        display: inline-block;
+    }
+}
+
+.invisible {
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width:$sp-width){
+
+.cntr {
+    width: 50%;
+    padding-right: 5px;
+    span {
+        //font-size: 90%;
+    }
+}
+
+}

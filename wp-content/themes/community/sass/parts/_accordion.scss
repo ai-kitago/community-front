@@ -1,0 +1,14 @@
+$label: $studio;
+
+.ui-accordion {
+    .ui-accordion-header {
+        outline: none;
+        &.ui-state-active {
+            color: $label;
+            border: none;
+        }
+    }
+    .ui-accordion-content {
+        padding: 0;
+    }
+}

@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$font-family: $gothic;
+
+body {
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: $normal;
+    line-height: 1.6;
+    //text-align: justify;
+    //font-feature-settings : "pkna" 1;
+    color: $gray;
+}
+
+$site-width: 1100px;
+$site-full: 100%;
+$max-width: 1130px;
+$pad-width: 1024px;
+$sp-width: 640px;
+$col-padding: 15px;
+$sp-padding: 15px;
+
+html {
+    width: 100%;
+    min-width: $max-width;
+}
+
+// Arign
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.block-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.wrapper {
+    width: $site-width;
+    padding-left: $col-padding;
+    padding-right: $col-padding;
+    margin: auto;
+    @include pie-clearfix;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.row {
+    margin-left: -$col-padding;
+    margin-right: -$col-padding;
+    position:relative;
+    @include pie-clearfix;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden-sp {
+    display: block;
+}
+span.hidden-sp {
+    display: inline-block;
+}
+
+.table-pc {
+    display: table;
+}
+
+.table-cell-pc {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.row-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:$sp-width){
+    
+html {
+    width: 100%;
+    min-width: $site-full;
+}
+    
+body {
+    -webkit-text-size-adjust: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    padding-left: $sp-padding;
+    padding-right: $sp-padding;
+    margin: auto;
+}
+
+.wrap {
+    width: 100%;
+    padding-left: $sp-padding;
+    padding-right: $sp-padding;
+}
+
+}
+
+.suck {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-left {
+    text-align: left;
+}
+
+// Margin
+.mb-pc-10 {
+    margin-bottom: 10px;
+}
+
+.mb-pc-20 {
+    margin-bottom: 20px;
+}
+.mt-pc-20 {
+    margin-top: 20px;
+}
+
+.mb-pc-20 {
+    margin-bottom: 20px;
+}
+
+.mb-pc-30 {
+    margin-bottom: 30px;
+}
+
+// Padding
+.pb-pc-20 {
+    padding-bottom: 20px;
+}
+.pt-pc-20 {
+    padding-top: 20px;
+}
+
+.hidden-pc {
+    display: none;
+}
+
+.visible-sp {
+    display: none;
+}
+
+// Grid
+.row {
+
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+// Image
+.frame {
+    padding: 2px;
+    border: 1px solid $border;
+}
+
+.col-pc-1,.col-pc-2,.col-pc-3,.col-pc-4,.col-pc-5,.col-pc-6,.col-pc-7,.col-pc-8,.col-pc-9,.col-pc-10,.col-pc-11,.col-pc-12,
+.col-sp-1,.col-sp-2,.col-sp-3,.col-sp-4,.col-sp-5,.col-sp-6,.col-sp-7,.col-sp-8,.col-sp-9,.col-sp-10,.col-sp-11,.col-sp-12
+{
+    padding-left: $col-padding;
+    padding-right: $col-padding;
+    float: left;
+}
+.col-pc-1 {
+    width: 8.333333%;
+}
+.col-pc-2 {
+    width: 16.666666%;
+}
+.col-pc-3 {
+    width: 25%;
+}
+.col-pc-4 {
+    width: 33.333333%;
+}
+.col-pc-5 {
+    width: 41.666666%;
+}
+.col-pc-6 {
+    width: 50%;
+}
+.col-pc-7 {
+    width: 58.333333%;
+}
+.col-pc-8 {
+    width: 66.666666%;
+}
+.col-pc-9 {
+    width: 74.999999%;
+}
+.col-pc-10 {
+    width: 83.333333%;
+}
+.col-pc-11 {
+    width: 91.666666%;
+}
+.col-pc-12 {
+    width: 100%;
+}
+
+.col-pc-offset-1 {
+    margin-left: 8.33333333%;
+}
+
+.col-pc-offset-2 {
+    margin-left: 16.666666%;
+}
+.col-pc-offset-3 {
+    margin-left: 25%;
+}
+.col-pc-offset-4 {
+    margin-left: 33.333333%;
+}
+.col-pc-offset-5 {
+    margin-left: 41.666666%;
+}
+.col-pc-offset-6 {
+    margin-left: 50%;
+}
+.col-pc-offset-7 {
+    margin-left: 58.333333%;
+}
+.col-pc-offset-8 {
+    margin-left: 66.666666%;
+}
+.col-pc-offset-9 {
+    margin-left: 74.999999%;
+}
+.col-pc-offset-10 {
+    margin-left: 83.333333%;
+}
+.col-pc-offset-11 {
+    margin-left: 91.666666%;
+}
+.col-pc-offset-12 {
+    margin-left: 100%;
+}
+
+@media screen and (max-width:$sp-width){
+
+.mb-sp-0 {
+    margin-bottom: 0;
+}
+
+.mb-sp-10 {
+    margin-bottom: 10px;
+}
+
+.mb-sp-20 {
+    margin-bottom: 20px;
+}
+
+.pt-sp-10 {
+    padding-top: 10px;
+}
+
+.pt-sp-20 {
+    padding-top: 20px;
+}
+
+.pb-sp-10 {
+    padding-bottom: 10px;
+}
+
+.pb-sp-20 {
+    padding-bottom: 20px;
+}
+
+.row {
+    margin-left: -$sp-padding;
+    margin-right: -$sp-padding;
+}
+
+.col-pc-offset-1,
+.col-pc-offset-2,
+.col-pc-offset-3,
+.col-pc-offset-4,
+.col-pc-offset-5,
+.col-pc-offset-6,
+.col-pc-offset-7,
+.col-pc-offset-8,
+.col-pc-offset-9,
+.col-pc-offset-10,
+.col-pc-offset-11,
+.col-pc-offset-12 {
+    margin-left: 0;
+}
+
+.col-sp-1,.col-sp-2,.col-sp-3,.col-sp-4,.col-sp-5,.col-sp-6,.col-sp-7,.col-sp-8,.col-sp-9,.col-sp-10,.col-sp-11,.col-sp-12,
+.col-sp-1,.col-sp-2,.col-sp-3,.col-sp-4,.col-sp-5,.col-sp-6,.col-sp-7,.col-sp-8,.col-sp-9,.col-sp-10,.col-sp-11,.col-sp-12
+{
+    padding-left: $sp-padding;
+    padding-right: $sp-padding;
+}
+
+.col-sp-1 {
+    width: 8.333333%;
+}
+.col-sp-2 {
+    width: 16.666666%;
+}
+.col-sp-3 {
+    width: 25%;
+}
+.col-sp-4 {
+    width: 33.333333%;
+}
+.col-sp-5 {
+    width: 41.666666%;
+}
+.col-sp-6 {
+    width: 50%;
+}
+.col-sp-7 {
+    width: 58.333333%;
+}
+.col-sp-8 {
+    width: 66.666666%;
+}
+.col-sp-9 {
+    width: 74.999999%;
+}
+.col-sp-10 {
+    width: 83.333333%;
+}
+.col-sp-11 {
+    width: 91.666666%;
+}
+.col-sp-12 {
+    width: 100%;
+}
+
+.col-sp-offset-1 {
+    margin-left: 8.33333333%;
+}
+
+.col-sp-offset-2 {
+    margin-left: 16.666666%;
+}
+.col-sp-offset-3 {
+    margin-left: 25%;
+}
+.col-sp-offset-4 {
+    margin-left: 33.333333%;
+}
+.col-sp-offset-5 {
+    margin-left: 41.666666%;
+}
+.col-sp-offset-6 {
+    margin-left: 50%;
+}
+.col-sp-offset-7 {
+    margin-left: 58.333333%;
+}
+.col-sp-offset-8 {
+    margin-left: 66.666666%;
+}
+.col-sp-offset-9 {
+    margin-left: 74.999999%;
+}
+.col-sp-offset-10 {
+    margin-left: 83.333333%;
+}
+.col-sp-offset-11 {
+    margin-left: 91.666666%;
+}
+.col-sp-offset-12 {
+    margin-left: 100%;
+}
+
+.col-sp-cell {
+    padding-left: $sp-padding;
+    padding-right: $sp-padding;
+    vertical-align: middle;
+    float: none;
+    display: table-cell;
+}
+
+.hidden-pc {
+    display: block;
+}
+
+.hidden-sp,
+span.hidden-sp {
+    display: none;
+}
+
+.visible-sp {
+    display: inline-block;
+}
+
+.float-none-sp {
+    float: none;
+}
+
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.transition {
+    @include transition-duration(0.1s);
+    &:hover {
+        background: rgba(100,100,100,0.05);
+    }
+}

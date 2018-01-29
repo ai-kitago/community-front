@@ -1,0 +1,43 @@
+.line-table {
+    th,td {
+        padding: 20px;
+        border-bottom: 1px solid $border;
+    }
+    th {
+        width: 30%;
+        font-weight: bold;
+    }
+    td {
+        width: 70%;
+    }
+    .cntr {
+        width: 33.33333%;
+        margin-right: 0;
+        float: left;
+    }
+}
+
+@media screen and (max-width:$sp-width){
+
+.line-table {
+    th,td {
+        width: 100%;
+        padding: 10px;
+        border-bottom: none;
+        display: block;
+    }
+    .cntr {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 80%;
+        float: left;
+        .label-cbx {
+            > span {
+                vertical-align: sub;
+            }
+        }
+    }
+}
+
+}

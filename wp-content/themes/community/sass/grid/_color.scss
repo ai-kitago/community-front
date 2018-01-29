@@ -1,0 +1,17 @@
+$category-color: (
+    studio: $studio,
+    event: $event,
+    instructor: $instructor,
+    job: $job,
+    company: $company,
+    access: $access,
+    license: $license
+);
+
+@each $category, $color in $category-color {
+    .category-color {
+        .#{$category} & {
+            color: $color;
+        }
+    }
+}

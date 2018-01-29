@@ -1,0 +1,451 @@
+/*
+.maparea {
+    height: 500px;
+    //margin-top: 40px;
+    background-image: url("images/map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    .home & {
+        margin-top: 40px;
+    }
+    .button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.maparea-box {
+    text-align: center;
+    position: absolute;
+    a {
+        width: 110px;
+        height: 80px;
+        padding: 10px 0;
+        background-color: $white;
+        //border: 1px solid $studio;
+        @include box-shadow(0 0 10px $gray-light);
+        @include border-radius(10px);
+        display: block;
+        @include transition-duration(0.5s);
+        &:hover {
+            @include opacity(0.7);
+            .maparea-title {
+                color: $studio;
+            }
+        }
+    }
+    &:after {
+        //content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        position: absolute;
+    }
+    .maparea-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: $gray;
+    }
+    .maparea-list {
+        font-size: 10px;
+        color: $gray-light;
+    }
+    $arrow: $white;
+    &.maparea-hokkaido {
+        top: 40px;
+        right: 120px;
+        &:after {
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent $arrow;
+            top: 40px;
+            right: -15px;
+        }
+    }
+    &.maparea-tohoku {
+        top: 170px;
+        right: 10px;
+        &:after {
+            border-width: 15px 15px 15px 0;
+            border-color: transparent $arrow transparent transparent;
+            top: 40px;
+            left: -15px;
+        }
+    }
+    &.maparea-hokuriku {
+        top: 170px;
+        right: 160px;
+        &:after {
+            border-width: 15px 15px 0 15px;
+            border-color: $arrow transparent transparent transparent;
+            bottom: -15px;
+            right: 15px;
+        }
+    }
+    &.maparea-kanto {
+        bottom: 120px;
+        right: 50px;
+        a {
+            height: 95px;
+        }
+        &:after {
+            border-width: 15px 15px 15px 0;
+            border-color: transparent $arrow transparent transparent;
+            top: 40px;
+            left: -15px;
+        }
+    }
+    &.maparea-tokai {
+        bottom: 40px;
+        right: 160px;
+        a {
+            width: 90px;
+        }
+        &:after {
+            border-width: 0 15px 15px 15px;
+            border-color: transparent transparent $arrow transparent;
+            top: -15px;
+            left: 10px;
+        }
+    }
+    &.maparea-kansai {
+        bottom: 25px;
+        left: 150px;
+        &:after {
+            border-width: 0 15px 15px 15px;
+            border-color: transparent transparent $arrow transparent;
+            top: -15px;
+            left: 45px;
+        }
+    }
+    &.maparea-chugoku {
+        top: 220px;
+        left: 140px;
+        a {
+            width: 90px;
+            height: 95px;
+        }
+        &:after {
+            border-width: 15px 15px 0 15px;
+            border-color: $arrow transparent transparent transparent;
+            bottom: -15px;
+            left: 15px;
+        }
+    }
+    &.maparea-shikoku {
+        bottom: 10px;
+        left: 50px;
+        a {
+            width: 90px;
+        }
+        &:after {
+            border-width: 0 15px 15px 15px;
+            border-color: transparent transparent $arrow transparent;
+            top: -15px;
+            right: 10px;
+        }
+    }
+    &.maparea-kyushu {
+        top: 260px;
+        left: 10px;
+        a {
+            height: 95px;
+        }
+        &:after {
+            border-width: 15px 15px 0 15px;
+            border-color: $arrow transparent transparent transparent;
+            bottom: -15px;
+            left: 45px;
+        }
+    }
+}
+*/
+
+.mapArea {
+    width: 100%;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 共通部分 */
+#studioMap {
+    margin: 0px auto;
+    padding: 0px;
+    background: transparent url(images/map/jp-studio.png) top left no-repeat;
+    background-position: -25px -50px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    li {
+    	margin: 0px;
+    	padding: 0px;
+    	position: absolute;
+    	list-style: none;
+    	font-size: 14px;
+    	a {
+            &.active {
+                background-image: url(images/map/jp-studio.png);
+                background-color: transparent;
+    	        background-repeat: no-repeat;
+            }
+    	}
+    }
+    a {
+    	position: absolute;
+    	span {
+        	display: none;
+        }
+    }
+    /* 北海道 */
+    .hokkaidoMap {
+    	top: 25px;
+        left: 360px;
+        a {
+            width: 150px;
+            height: 120px;
+            &.active {
+            	background-position: -385px -522px;
+            }
+        }
+    }
+
+    /* 東北 */
+    .touhokuMap {
+        top: 141px;
+        left: 300px;
+        a {
+    	    width: 180px;
+            height: 140px;
+            &.active {
+                background-position: -325px -992px;
+            }
+        }
+    }
+
+    /* 北陸・甲信越 */
+    .hokurikuMap {
+    	top: 220px;
+        left: 213px;
+        a {
+            width: 128px;
+            height: 90px;
+            &.active {
+                background-position: -238px -1780px;
+            }
+        }
+    }
+
+    /* 関東 */
+    .kantoMap {
+        top: 259px;
+        left: 287px;
+        a {
+        	width: 80px;
+            height: 70px;
+            &.active {
+                background-position: -312px -1463px;
+            }
+        }
+    }
+
+    /* 東海 */
+    .tokaiMap {
+        top: 265px;
+        left: 210px;
+        a {
+            width: 86px;
+            height: 70px;
+            &.active {
+                background-position: -234px -2184px;
+            }
+        }
+    }
+
+    /* 関西 */
+    .kansaiMap {
+    	top: 260px;
+        left: 180px;
+        a {
+        	width: 59px;
+            height: 82px;
+            &.active {
+                background-position: -205px -2533px;
+            }
+        }
+    }
+
+    /* 中国 */
+    .chugokuMap {
+    	top: 260px;
+        left: 100px;
+        a {
+    	    width: 90px;
+            height: 45px;
+            &.active {
+                background-position: -124px -2886px;
+            }
+        }
+    }
+
+    /* 四国 */
+    .shikokuMap {
+        top: 302px;
+        left: 127px;
+        a {
+            width: 62px;
+            height: 70px;
+            &.active {
+                background-position: -151px -3282px;
+            }
+        }
+    }
+
+    /* 九州 */
+    .kyushuMap {
+        top: 293px;
+        left: 65px;
+        a {
+            width: 55px;
+            height: 90px;
+            &.active {
+                background-position: -90px -3631px;
+            }
+        }
+    }
+
+    /* 沖縄 */
+    .okinawaMap {
+        top: 75px;
+        left: 20px;
+        a {
+            width: 40px;
+            height: 50px;
+            &.active {
+                background-position: -45px -3766px;
+            }
+        }
+    }
+}
+
+/*******************************************
+ pref
+********************************************/
+.studioSearch {
+    ul {
+        &.prefList {
+            &.active {
+                border: 2px solid $border;
+            }
+        }
+    }
+}
+
+.mapArea {
+    img {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    ul {
+        padding: 1px;
+        margin: 0;
+        font-size: 12px;
+        &.prefList {
+            list-style: none;
+            border: 2px solid $border;
+            li {
+                width: 60px;
+                border: 1px solid $border;
+                border-bottom: 1px solid #fff;
+                background: rgba(0,0,0,0.1);
+                text-align: center;
+                a {
+                    color: $gray;
+                    padding: 5px 10px 4px;
+                    display: block;
+                    &:hover {
+                    text-decoration: none;
+                   }
+                }
+                &:hover {
+                    @include opacity(0.8);
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .hokkaido {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
+    .touhoku {
+        position: absolute;
+        top: 150px;
+        right: 15px;
+    }
+    .hokuriku {
+        position: absolute;
+        top: 55px;
+        right: 37%;
+    }
+    .kanto {
+        position: absolute;
+        bottom: 15px;
+        right: 18%;
+    }
+    .tokai {
+        width: 126px;
+        position: absolute;
+        bottom: 20px;
+        right: 33%;
+        li {
+            float: left;
+            &:nth-child(3),:nth-child(4){
+                border-bottom: none;
+            }
+        }
+    }
+    .kansai {
+        position: absolute;
+        top: 90px;
+        left: 34%;
+    }
+    .chugoku {
+        position: absolute;
+        top: 120px;
+        left: 18%;
+    }
+    .shikoku {
+        width: 126px;
+        position: absolute;
+        bottom: 15px;
+        left: 17%;
+        li {
+            float: left;
+             &:nth-child(3),:nth-child(4){
+                border-bottom: none;
+            }
+        }
+    }
+    .kyushu {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+    .okinawa {
+        position: absolute;
+        top: 120px;
+        left: 15px;
+    }
+    .countries {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+    }
+}
