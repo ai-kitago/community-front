@@ -19,29 +19,7 @@ get_header(); ?>
 			
 			<article id="post-<?php the_ID(); ?>" <?php post_class('studio'); ?>>
 				<header class="tax-header">
-					<div class="wrapper">
-						<div class="row row-height mb-pc-20">
-							<div class="col-pc-6 col-sp-12">
-								<div class="header-box">
-									<h1 class="tax-title">【<?php single_cat_title(); ?>版】&nbsp;ヨガスタジオ・教室検索</h1>
-									<?php //$panelClass->getPanel(); ?>
-								</div>
-							</div>
-							<div class="col-pc-6 col-sp-12">
-								<div class="slick-tax">
-									<ul>
-										<?php for($i=1;$i <= 4;$i++) : ?>
-										<li>
-											<a href="#">
-												<img src="<?php echo get_template_directory_uri(); ?>/images/no-image.jpg" data-lazy="<?php echo get_template_directory_uri(); ?>/images/studio/top/studio-top-image-<?php echo sprintf('%02d',$i); ?>.jpg">
-											</a>
-										</li>
-										<?php endfor; ?>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</header>
 				<section class="front-section studio">
 					<div class="wrapper">
