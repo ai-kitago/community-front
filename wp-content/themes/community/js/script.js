@@ -6,6 +6,12 @@ jQuery(function($){
         //collapsible: true
         heightStyle: "line-content"
     });
+    /*
+    $("select[multiple='multiple']").multipleSelect({
+        disable: true,
+        placeholder: "複数選択可"
+    });
+    */
 });
 
 jQuery(function($){

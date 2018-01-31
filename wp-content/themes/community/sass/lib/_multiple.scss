@@ -1,0 +1,22 @@
+.ms-parent {
+    padding: 0 !important;
+}
+.ms-choice {
+    height: 40px;
+    padding: 9px 10px 7px;
+    border: none;
+    background: $white;
+    &.disabled {
+        border: none;
+        background: $white;
+    }
+    > span {
+        line-height: 42px;
+    }
+    > span.placeholder {
+        color: $gray;
+    }
+}
+.ms-drop {
+    z-index: 1;
+}

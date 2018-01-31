@@ -12,15 +12,17 @@
         right: 0;
         bottom: 0;
         @include opacity(0.8);
-        .page-studio & {
+        .page-studio &,
+        .single-studio.single-list & {
             @include background-image(linear-gradient(120deg, darken($studio,20%), lighten($studio,10%)));
         }
         .page-instructor &,
-        .single-list & {
+        .single-instructor.single-list & {
             @include background-image(linear-gradient(120deg, darken($instructor,20%), lighten($instructor,10%)));
         }
         .page-schedule &,
-        .page-event & {
+        .page-event &,
+        .single-event.single-list & {
             @include background-image(linear-gradient(120deg, darken($event,20%), lighten($event,10%)));
         }
         .page-job & {

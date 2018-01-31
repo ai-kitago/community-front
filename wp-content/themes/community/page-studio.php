@@ -32,6 +32,7 @@ get_header(); ?>
 					</div>
 				</header>
 				<section class="front-section studio">
+					<form action="/studio/list/" method="get">
 					<div class="wrapper">
 						<header class="section-header">
 							<h1 class="section-title">ヨガスタジオ・教室を探す<span class="category-color">STUDIO SEARCH</span></h1>
@@ -43,6 +44,9 @@ get_header(); ?>
 								</div>
 								<div class="col-pc-6 col-sp-12">
 									<?php $panelClass->getPanel(); ?>
+								</div>
+								<div class="col-pc-4 col-pc-offset-4 col-sp-12">
+									<button class="button button-block button-panel">検索する<small class="category-color">SEARCH</small></button>
 								</div>
 							</div>
 						</div>

@@ -230,6 +230,60 @@ get_header(); ?>
 						</div>
 					</div>
 				</section>
+				<section class="entry-section">
+					<div class="wrapper">
+						<header class="section-header">
+							<h2 class="section-title">クーポン<span class="category-color">COUPON</span></h2>
+						</header>
+						<div class="entry-content">
+							<div class="entry-coupon">
+								<div class="row row-height">
+								<?php
+									$coupon = array(
+										array(
+											'title'=>'入会金事務手数料無料、当日入会で体験千円が無料！',
+											'content'=>'入会金、事務手数料が無料となります。
+
+また、OHANAsmileが初めての方は、￥1,000円でご体験いただくことができ、さらに、当日中のご入会で体験利用料は全額キャッシュバックとなります。
+
+毎月の会費はクレジットカードでの自動支払いが可能で、しかも、￥4,800／4回、￥7,800／8回でヨガマットレンタル無料の良心価格。
+
+この機会をお見逃しなく！'
+										),
+										array(
+											'title'=>'いまだけ！初回体験レッスンが500円！',
+											'content'=>'初回体験レッスン1,080円（税込）が
+今だけ500円！！
+レンタルマット無料！！
+♪:*:･･:*:･♪･:*:･･:*:･♪･:*:･･:*:･♪
+
+新しいことを始めてみたい・・・
+まずは「体験」してみませんか？
+体験後の入会でお得なプランあります！
+
+ドゥミ入会者の6割以上は運動経験のない方☆
+安心して参加できる！'
+										),
+										array(
+											'title'=>'当日入会で入会金半額 体験料キャッシュバック',
+											'content'=>'各クラス先着２名様までの丁寧な指導(要予約)
+
+日本経済新聞に大きく紹介された人気のヨガ教室。
+体験の段階から、各自の心身の状態を把握するため入念なカウンセリングを行います。身体が固くてポーズがでできない人も、腰痛で十分な動きができない人も、膝の痛みで正座や足を曲げることができない人も、自分のできる態勢で痛みを気にすることなく、安心して受講していただけます。フィットネスクラブの施設を利用して心地良い空間で心身を調える本格的なヨガの教室です。
+(フィットネスクラブの会員にならなくてもOK)
+
+体験日当日に入会受講の手続きをしていただくと、入会金￥5,400が半額になるチャンス！更に体験料もキャッシュバック。是非この機会に体験してください'
+										),
+									);
+									foreach($coupon as $key => $val) :
+										include (get_template_directory().'/template-parts/content-coupon.php');
+									endforeach;
+								?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 				<section class="entry-section company">
 					<div class="wrapper">
 						<header class="section-header">

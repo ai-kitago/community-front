@@ -103,7 +103,7 @@ get_header(); ?>
 						<footer class="section-footer">
 							<div class="row">
 								<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">新着イベント<small class="category-color">LATEST ENTRIES</small></a>
+									<a href="<?php echo get_permalink( get_page_by_path('event')->ID ); ?>/list/" class="button button-footer">新着イベント<small class="category-color">LATEST ENTRIES</small></a>
 								</div>
 							</div>
 						</footer>

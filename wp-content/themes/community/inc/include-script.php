@@ -31,6 +31,20 @@ function front_footer_script() {
             get_template_directory_uri().'/lib/animsition/css/animsition.min.css'
         );
 */
+        
+        wp_enqueue_script(
+            'multiplejs',
+            get_template_directory_uri().'/lib/multiple/multiple-select.js',
+            array('jquery'),
+            false,
+            true
+        );
+        
+        wp_enqueue_style(
+            'multiplecss',
+            get_template_directory_uri().'/lib/multiple/multiple-select.css'
+        );
+        
         wp_enqueue_script(
             'iScroll',
             get_template_directory_uri().'/lib/iscroll/iscroll-lite.js',
@@ -122,6 +136,14 @@ function front_footer_script() {
             'Font Awesome',
             'https://use.fontawesome.com/9520ab88b9.js',
             array(),
+            false,
+            true
+        );
+        
+        wp_enqueue_script(
+            'org-accordion',
+            get_template_directory_uri().'/js/accordion.js',
+            array('jquery'),
             false,
             true
         );

@@ -1,0 +1,12 @@
+jQuery(function($){
+    $('.acc-toggle').on('click',function(){
+        console.log('click');
+        if($(this).hasClass('close')){
+            $(this).removeClass('close');
+            $(this).next('div.acc-content').fadeOut(500);
+        }else{
+            $(this).addClass('close');
+            $(this).next('div.acc-content').fadeIn(500);
+        }
+    });
+});

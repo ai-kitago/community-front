@@ -9,14 +9,21 @@
         font-weight: 300;
         padding-top: 1px;
         text-decoration: none;
-        .single-list & {
+        .single-instructor & {
             color: $instructor;
             border: 1px solid $instructor;
             border-left-width: 0;
         }
+        .single-event &,
         .page-schedule & {
             color: $event;
             border: 1px solid $event;
+            border-left-width: 0;
+        }
+        .single-studio &,
+        .tax-area & {
+            color: $studio;
+            border: 1px solid $studio;
             border-left-width: 0;
         }
         min-width: 50px;
@@ -27,11 +34,16 @@
             a {
                 &:hover {
                     color: $white;
-                    .single-list & {
+                    .single-instructor & {
                         background-color: $instructor;
                     }
+                    .single-event &,
                     .page-schedule & {
                         background-color: $event;
+                    }
+                    .single-studio &,
+                    .tax-area & {
+                        background-color: $studio;
                     }
                     @include opacity(0.85);
                 }
@@ -84,11 +96,16 @@
  
 .pagination li.current a {
     color: $white;
-    .single-list & {
+    .single-instructor & {
         background-color: $instructor;
     }
+    .single-event &,
     .page-schedule & {
         background-color: $event;
+    }
+    .single-studio &,
+    .tax-area & {
+        background-color: $studio;
     }
     cursor: default;
     pointer-events: none;

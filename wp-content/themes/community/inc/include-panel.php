@@ -5,58 +5,86 @@ class panelClass {
 
 <div class="panel-search">
 	<h3 class="panel-title">簡単検索</h3>
-	<form>
-		<ul class="panel-ul">
-			<li class="panel-li">
-				<label class="panel-label">フリーワード</label>
-				<input type="text" class="input-field" placeholder="スタジオ名・駅名など">
-			</li>
-			<li>
-				<label class="panel-label">条件検索</label>
-				<div class="panel-checkbox">
-					<div class="cntr">
-						<label for="cbx-01" class="label-cbx">
-							<input id="cbx-01" type="checkbox" class="invisible">
-							<div class="checkbox">
-								<svg width="20px" height="20px" viewBox="0 0 20 20">
-<path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-<polyline points="4 11 8 15 16 6"></polyline>
-								</svg>
-							</div>
-							<span>ホットヨガ</span>
-						</label>
-					</div>
-					<div class="cntr">
-						<label for="cbx-02" class="label-cbx">
-							<input id="cbx-02" type="checkbox" class="invisible">
-							<div class="checkbox">
-								<svg width="20px" height="20px" viewBox="0 0 20 20">
-<path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-<polyline points="4 11 8 15 16 6"></polyline>
-								</svg>
-							</div>
-							<span>岩盤ヨガ</span>
-						</label>
-					</div>
-					<div class="cntr">
-						<label for="cbx-03" class="label-cbx">
-							<input id="cbx-03" type="checkbox" class="invisible">
-							<div class="checkbox">
-								<svg width="20px" height="20px" viewBox="0 0 20 20">
-<path d="M3,1 L17,1 L17,1 C18.1045695,1 19,1.8954305 19,3 L19,17 L19,17 C19,18.1045695 18.1045695,19 17,19 L3,19 L3,19 C1.8954305,19 1,18.1045695 1,17 L1,3 L1,3 C1,1.8954305 1.8954305,1 3,1 Z"></path>
-<polyline points="4 11 8 15 16 6"></polyline>
-								</svg>
-							</div>
-							<span>常温ヨガ</span>
-						</label>
-					</div>
+	<ul class="panel-ul">
+		<li class="panel-li">
+		    <label class="panel-label">フリーワード</label>
+			<input type="text" class="input-field" placeholder="スタジオ名・駅名など">
+		</li>
+		<li>
+            <label class="panel-label">スタイル</label>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-01">
+				    <input id="cbx-style-01" class="checkbox-input" type="checkbox" value="style-01">
+					<span class="checkbox-parts">ホットヨガ</span>
+				</label>
+			</div>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-02">
+				    <input id="cbx-style-02" class="checkbox-input" type="checkbox" value="style-02">
+					<span class="checkbox-parts">アシュタンガヨガ</span>
+				</label>
+			</div>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-03">
+				    <input id="cbx-style-03" class="checkbox-input" type="checkbox" value="style-03">
+					<span class="checkbox-parts">ハタヨガ</span>
+				</label>
+			</div>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-04">
+				    <input id="cbx-style-04" class="checkbox-input" type="checkbox" value="style-04">
+					<span class="checkbox-parts">シヴァナンダヨガ</span>
+				</label>
+			</div>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-05">
+				    <input id="cbx-style-05" class="checkbox-input" type="checkbox" value="style-05">
+					<span class="checkbox-parts">パワーヨガ</span>
+				</label>
+			</div>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-06">
+				    <input id="cbx-style-06" class="checkbox-input" type="checkbox" value="style-06">
+					<span class="checkbox-parts">ヨギックアーツ</span>
+				</label>
+			</div>
+			<div class="cntr checkbox">
+			    <label for="cbx-style-07">
+				    <input id="cbx-style-07" class="checkbox-input" type="checkbox" value="style-07">
+					<span class="checkbox-parts">イシュタヨガ</span>
+				</label>
+			</div>
+        </li>
+		<li>
+			<label class="panel-label">条件検索</label>
+			<div class="panel-checkbox">
+				<div class="cntr checkbox">
+				    <label for="cbx-style-01">
+					    <input id="cbx-style-01" class="checkbox-input" type="checkbox" value="style-01">
+						<span class="checkbox-parts">ホットヨガ</span>
+					</label>
 				</div>
-			</li>
-		</ul>
-		<div class="col-pc-6 col-pc-offset-3 col-sp-12">
-			<button class="button button-block button-panel">検索する<small class="category-color">SEARCH</small></button>
-		</div>
-	</form>
+				<div class="cntr checkbox">
+				    <label for="cbx-style-02">
+					    <input id="cbx-style-02" class="checkbox-input" type="checkbox" value="style-02">
+						<span class="checkbox-parts">岩盤ヨガ</span>
+					</label>
+				</div>
+				<div class="cntr checkbox">
+				    <label for="cbx-style-03">
+					    <input id="cbx-style-03" class="checkbox-input" type="checkbox" value="style-03">
+						<span class="checkbox-parts">常温ヨガ</span>
+					</label>
+				</div>
+				<div class="cntr checkbox">
+				    <label for="cbx-style-04">
+					    <input id="cbx-style-04" class="checkbox-input" type="checkbox" value="style-04">
+						<span class="checkbox-parts">女性限定</span>
+					</label>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
 
 <?php
@@ -108,7 +136,7 @@ class panelClass {
             <div class="field-group">
             	<?php if($option == 'city') : ?>
                 <label>市区町村</label>
-                <select class="input-field city-select" disabled>
+                <select class="input-field city-select" disabled="disabled">
                     <option>すべて</option>
                     <?php foreach($dataClass->getCity(13) as $key => $value) : ?>
                     <option value="<?php echo $value[3]; ?>"><?php echo $value[1]; ?></option>
@@ -142,7 +170,7 @@ class panelClass {
                 <label>並び順</label>
                 <select class="input-field date-select">
                     <option>新着順</option>
-                    <option>登録順</option>
+                    <option>更新順</option>
                     <option>人気順</option>
                 </select>
                 <?php endif; ?>
@@ -186,6 +214,14 @@ class panelClass {
                     <?php endforeach; ?>
                 </select>
                 <?php endif; ?>
+                <?php if($category == 'sort') : ?>
+                <label>並び順</label>
+                <select class="input-field date-select">
+                    <option>新着順</option>
+                    <option>更新順</option>
+                    <option>人気順</option>
+                </select>
+                <?php endif; ?>
             </div>
             <div class="field-group">
                 <label>キーワード</label>
@@ -210,6 +246,8 @@ jQuery(function($){
             console.log(pref);
             cityChange($(this),pref);
         } else {
+            console.log('DIS');
+            //c_select.multipleSelect("disable");
             $('.city-select').attr("disabled", "disabled");
         }
     });
@@ -217,11 +255,13 @@ jQuery(function($){
         var parent = element.closest('.row');
         c_select = parent.find('.city-select');
         c_select.empty();
+        
         c_select.append(
             $("<option />")
                 .val('')
                 .text('すべて')
         );
+        
         for(c in _city){
             if(_city[c][2] == pref) {
                 c_select.append(
@@ -232,6 +272,13 @@ jQuery(function($){
             }
         }
         c_select.removeAttr("disabled");
+        /*
+        c_select.multipleSelect({
+            placeholder: "複数選択可",
+            selectAllText: "すべて"
+        });
+        c_select.multipleSelect("enable");
+        */
     }
 });
 -->

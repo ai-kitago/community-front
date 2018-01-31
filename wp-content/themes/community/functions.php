@@ -219,3 +219,25 @@ function add_list_template( $single_template ) {
 }
  
 add_filter( 'single_template', 'add_list_template' );
+/*
+function get_custom_post_type_template( $archive_template ) {
+     global $post;
+     if ( is_post_type_archive ( 'tax-area' ) ) {
+          $archive_template = locate_template( 'tex-city.php' );
+     }
+     return $archive_template;
+}
+
+add_filter( 'archive_template', 'get_custom_post_type_template' ) ;
+*/
+function get_custom_taxonomy_template($taxonomy_template) {
+    global $term;
+    if(is_tax('area') && is_numeric($term)) {
+        $taxonomy_template = locate_template( 'taxonomy-city.php' );
+    }elseif(is_tax('area') && $term == 'list'){
+    	$taxonomy_template = locate_template( 'taxonomy-list.php' );
+    }
+    return $taxonomy_template;
+
+}
+add_filter( 'taxonomy_template', 'get_custom_taxonomy_template' );

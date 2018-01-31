@@ -59,6 +59,102 @@
         }
     }
 }
+.col-list {
+    &:first-of-type {
+        .list {
+            border-top: 1px solid $border;
+        }
+    }
+}
+.list {
+    width: 100%;
+    padding: 15px;
+    background: $white;
+    border-left: 1px solid $border;
+    border-right: 1px solid $border;
+    border-bottom: 1px solid $border;
+    display: table;
+    &.free {
+        padding: 15px;
+        .list-content {
+            padding-left: 0;
+            padding-right: 0;
+            vertical-align: middle;
+            display: table-cell;
+            .list-meta {
+                margin-right: 20px;
+                display: inline;
+            }
+            .list-title {
+                margin: 5px
+            }
+        }
+    }
+    .list-thumbnail {
+        width: 30%;
+        display: table-cell;
+        .list-image {
+            
+        }
+    }
+    .list-content {
+        padding-left: 20px;
+        //padding-right: 15px;
+        vertical-align: middle;
+        display: table-cell;
+        a {
+            color: $gray;
+        }
+        .list-title {
+            margin-bottom: 10px;
+            font-size: 21px;
+            display: inline-block;
+        }
+        .list-description {
+            margin-bottom: 5px;
+            p {
+                margin-bottom: 0;
+                font-size: 12px;
+            }
+        }
+        .list-meta {
+            margin-bottom: 10px;
+            font-size: 14px;
+            .list-label {
+                padding: 2px 3px;
+                margin-right: 10px;
+                border: 1px solid $studio;
+            }
+            .list-date {
+                font-size: 12px;
+                color: $gray-light;
+                float: right;
+            }
+            .fa {
+                color: $studio;
+                margin-left: 10px;
+                margin-right: 5px;
+            }
+        }
+        .list-footer {
+            text-align: right;
+            .style-tag {
+                font-size: 12px;
+                .tag {
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    margin-right: 0;
+                    background: $gray-light;
+                    display: inline-block;
+                }
+            }
+            .list-author {
+                font-size: 12px;
+                color: $gray-light;
+            }
+        }
+    }
+}
 
 .instructor-block {
     height: 100%;

@@ -27,35 +27,38 @@ get_header(); ?>
 							<h2 class="section-title">ヨガスタジオ・教室を探す<span class="category-color">STUDIO SEARCH</span></h2>
 						</header>
 						<div class="section-content">
-							<div class="row">
-								<div class="col-pc-12 col-sp-12">
-									<div id="tabs" class="tabs">
-										<ul class="tabs-ul">
-											<li class="tabs-li"><a href="#area">エリアで検索</a></li>
-											<li class="tabs-li"><a href="#line">路線・駅で検索</a></li>
-										</ul>
-										<div id="area" class="tab-content">
-										<?php $pref_id = get_field('pref_id'); ?>
-											<form action="/studio/area/kanto/tokyo/city/" method="get">
+							<form action="./list/" method="get">
+								<div class="row">
+									<div class="col-pc-6 col-sp-12">
+										<div id="tabs" class="tabs">
+											<ul class="tabs-ul">
+												<li class="tabs-li"><a href="#area">エリアで検索</a></li>
+												<li class="tabs-li"><a href="#line">路線・駅で検索</a></li>
+											</ul>
+											<div id="area" class="tab-content tab-scroll">
+											<?php $pref_id = get_field('pref_id'); ?>
+											
 												<div class="city-box">
 												<?php foreach ($dataClass->getCity($pref_id) as $key => $value) : ?>
 													<div class="cntr checkbox">
 														<label for="cbx-area-<?php echo $key; ?>">
 															<input id="cbx-area-<?php echo $key; ?>" class="checkbox-input" type="checkbox" value="<?php echo $value[3]; ?>">
-															<span class="checkbox-parts"><?php echo $value[1]; ?></span>
+															<span class="checkbox-parts"></span>
 														</label>
+														<a href="/studio/area/kanto/tokyo/<?php echo $value[3]; ?>/"><?php echo $value[1]; ?></a>
 													</div>
 												<?php endforeach; ?>
 												</div>
+												<!--
 												<div class="row">
 													<div class="col-pc-4 col-pc-offset-4 col-sp-12">
 														<button class="button button-block">絞り込む</button>
 													</div>
 												</div>
-											</form>
-										</div>
-										<div id="line" class="tab-content">
-											<form action="/studio/area/kanto/tokyo/">
+												-->
+											</div>
+											<div id="line" class="tab-content tab-scroll">
+	
 												<div class="line-box">
 													<ul class="accordion line-ul">
 													<?php
@@ -74,7 +77,7 @@ get_header(); ?>
 																<span class="checkbox-parts"><?php echo $stationValue[2]; ?></span>
 															</label>
 														</div>
-													
+														
 													<?php
 															endforeach;
 															echo '</div>';
@@ -84,19 +87,18 @@ get_header(); ?>
 													?>
 													</ul>
 												</div>
-												<div class="row">
-													<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-														<button class="button button-block">絞り込む</button>
-													</div>
-												</div>
-											</form>
+	
+											</div>
 										</div>
 									</div>
+									<div class="col-pc-6 col-sp-12">
+										<?php $panelClass->getPanel(); ?>
+									</div>
+									<div class="col-pc-4 col-pc-offset-4 col-sp-12">
+										<button class="button button-block button-panel">検索する<small class="category-color">SEARCH</small></button>
+									</div>
 								</div>
-								<div class="col-pc-12 col-sp-12">
-									<?php $panelClass->getPanel(); ?>
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</section>
