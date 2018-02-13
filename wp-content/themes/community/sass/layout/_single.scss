@@ -139,16 +139,6 @@ body.single-studio {
     }
 }
 
-.tag {
-    padding: 5px 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    color: $white;
-    background: $gray;
-    display: inline-block;
-    @include border-radius(50px);
-}
-
 #gpsearch-map {
     height: 350px;
     margin-bottom: 20px;

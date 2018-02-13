@@ -20,6 +20,7 @@ body.drawer--right {
 .drawer-nav {
     color: $white;
     background: $dark;
+    z-index: 11;
 }
 
 }
@@ -38,6 +39,10 @@ body.drawer-open {
             background-color: $gray;
         }
     }
+}
+
+.drawer-overlay {
+    z-index: 10;
 }
 
 }

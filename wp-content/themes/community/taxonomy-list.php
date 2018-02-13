@@ -193,6 +193,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	
+	<?php include(get_template_directory().'/template-parts/content-add.php'); ?>
 
 <?php
 //get_sidebar();

@@ -17,6 +17,22 @@
     }
 }
 
+.table-program {
+    width: 800px;
+    margin: auto;
+    tbody {
+        th,td {
+            padding: 20px;
+            vertical-align: top;
+        }
+        th {
+            width: 200px;
+            font-weight: bold;
+            border-right: 1px solid $border;
+        }
+    }
+}
+
 @media screen and (max-width:$sp-width){
 
 .line-table {

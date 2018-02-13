@@ -36,6 +36,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "layout/tax";
 
 @import "content/instructor";
+@import "content/login";
+@import "content/signup";
+@import "content/register";
+@import "content/forget";
 
 @import "layout/add";
 @import "layout/calendar";
@@ -45,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "lib/slick";
 @import "lib/venobox";
 @import "lib/multiple";
+@import "lib/dropzone";
 
 @import "parts/panel";
 @import "parts/block";
@@ -58,3 +63,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "parts/accordion";
 @import "parts/pagination";
 @import "parts/tag";
+@import "parts/search";

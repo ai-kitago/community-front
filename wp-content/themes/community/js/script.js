@@ -6,12 +6,15 @@ jQuery(function($){
         //collapsible: true
         heightStyle: "line-content"
     });
-    /*
-    $("select[multiple='multiple']").multipleSelect({
-        disable: true,
-        placeholder: "複数選択可"
+    $('.button-search').on('click',function(){
+        $('.overlay-search').show();
+        $('.header-search').show();
+        $('.field-search').focus();
     });
-    */
+    $('.overlay-search').on('click',function(){
+        $(this).hide();
+        $('.header-search').hide();
+    });
 });
 
 jQuery(function($){
@@ -166,3 +169,4 @@ jQuery(function($){
         $this.children('.pref-content').slideToggle('slow');
     });
 });
+

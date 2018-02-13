@@ -1,3 +1,14 @@
+.tag {
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: $white;
+    background: $gray;
+    display: inline-block;
+    @include border-radius(50px);
+}
+
 .license-tag{
     list-style-type: none;
     display: inline-block;

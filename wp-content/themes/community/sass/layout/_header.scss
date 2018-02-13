@@ -17,7 +17,11 @@
     body.page-schedule &,
     body.page-event &,
     body.page-job &,
-    body.tax-area & {
+    body.tax-area &,
+    body.page-register &,
+    body.page-signup &,
+    body.page-forget &,
+    body.page-login &{
         background-color: rgba(0,0,0,0);
     }
 }

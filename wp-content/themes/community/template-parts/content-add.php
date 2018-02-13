@@ -39,7 +39,7 @@
         <footer class="section-footer">
             <div class="row">
                 <div class="col-pc-4 col-pc-offset-4 col-sp-12">
-                    <a href="#" class="button button-white category-color">登録する</a>
+                    <a href="<?php echo get_permalink( get_page_by_path('signup')->ID ); ?>" class="button button-white category-color">登録する</a>
                 </div>
             </div>
         </footer>

@@ -69,6 +69,18 @@
         background: $secondary;
         //border: 1px solid $primary;
     }
+    &.button-facebook {
+        color: $white;
+        background: $facebook;
+    }
+    &.button-google {
+        color: $white;
+        background: $google;
+    }
+    &.button-twitter {
+        color: $white;
+        background: $twitter;
+    }
     &.button-disable {
         white-space: nowrap;
     }
@@ -79,6 +91,11 @@
         &:hover {
             @include box-shadow(0 2px 20px #bbb);
         }
+    }
+    &.button-border {
+        color: $gray;
+        background: $white;
+        border: 1px solid $gray;
     }
     &:hover {
         @include opacity(0.9);

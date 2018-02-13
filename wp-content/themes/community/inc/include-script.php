@@ -95,6 +95,15 @@ function front_footer_script() {
             'slicktheme',
             get_template_directory_uri().'/lib/slick/slick-theme.css'
         );
+        
+        wp_enqueue_script(
+            'dropzonejs',
+            get_template_directory_uri().'/lib/dropzone/dropzone.js',
+            array('jquery'),
+            false,
+            true
+        );
+
         /*
         wp_enqueue_script(
             'tabsjs',

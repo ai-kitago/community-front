@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('event'); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('job'); ?>>
 				<header class="page-header">
 					<div class="slick-header">
 						<ul>
@@ -33,7 +33,7 @@ get_header(); ?>
 				</header>
 				<form action="/schedule/" method="get">
 				<?php
-					$panelClass->getSearch('date','event');
+					$panelClass->getSearch('type','status');
 				?>
 				</form>
 				<section class="front-section job">
@@ -69,7 +69,7 @@ get_header(); ?>
 						<footer class="section-footer">
 							<div class="row">
 								<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">おすすめイベント<small class="category-color">PICK UP</small></a>
+									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">おすすめ求人情報<small class="category-color">PICK UP</small></a>
 								</div>
 							</div>
 						</footer>
@@ -103,7 +103,7 @@ get_header(); ?>
 						<footer class="section-footer">
 							<div class="row">
 								<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">新着イベント<small class="category-color">LATEST ENTRIES</small></a>
+									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">新着求人情報<small class="category-color">LATEST ENTRIES</small></a>
 								</div>
 							</div>
 						</footer>

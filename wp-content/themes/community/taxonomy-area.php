@@ -45,7 +45,7 @@ get_header(); ?>
 															<input id="cbx-area-<?php echo $key; ?>" class="checkbox-input" type="checkbox" value="<?php echo $value[3]; ?>">
 															<span class="checkbox-parts"></span>
 														</label>
-														<a href="/studio/area/kanto/tokyo/<?php echo $value[3]; ?>/"><?php echo $value[1]; ?></a>
+														<a href="/studio/area/kanto/tokyo/city/<?php echo $value[3]; ?>/"><?php echo $value[1]; ?></a>
 													</div>
 												<?php endforeach; ?>
 												</div>
@@ -74,7 +74,8 @@ get_header(); ?>
 														<div class="cntr checkbox">
 															<label for="cbx-line-<?php echo $prefline_id; ?>-<?php echo $stationValue[1]; ?>">
 																<input id="cbx-line-<?php echo $prefline_id; ?>-<?php echo $stationValue[1]; ?>" class="checkbox-input" type="checkbox">
-																<span class="checkbox-parts"><?php echo $stationValue[2]; ?></span>
+																<span class="checkbox-parts"></span>
+																<a href="/studio/area/kanto/tokyo/line/<?php echo $prefline_id . '-' . $stationValue[1]; ?>/"><?php echo $stationValue[2]; ?></a>
 															</label>
 														</div>
 														
@@ -155,6 +156,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+	
+	<?php include(get_template_directory().'/template-parts/content-add.php'); ?>
 
 <?php
 //get_sidebar();

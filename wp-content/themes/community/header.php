@@ -36,7 +36,7 @@
 			?>
 			</nav><!-- #site-navigation -->
 			<div class="header-icon-nav">
-				<button type="button" class="button button-icon icon-search"></button>
+				<button type="button" class="button button-search button-icon icon-search"></button>
 				<button type="button" class="drawer-toggle drawer-hamburger">
 					<span class="sr-only">toggle navigation</span>
 					<span class="drawer-hamburger-icon"></span>
@@ -44,6 +44,15 @@
 			</div>
 		</div>
 	</header><!-- #masthead -->
+	<div class="header-search">
+		<div class="search-form">
+			<form action="/search/" method="get">
+				<input type="text" class="field-search" name="s" placeholder="キーワード">
+				<span>Enterを押して検索</span>
+			</form>
+		</div>
+	</div>
+	<div class="overlay-search"></div>
 	
 	<nav class="drawer-nav" role="navigation">
 		<ul class="drawer-menu">

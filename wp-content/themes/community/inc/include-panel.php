@@ -7,7 +7,7 @@ class panelClass {
 	<h3 class="panel-title">簡単検索</h3>
 	<ul class="panel-ul">
 		<li class="panel-li">
-		    <label class="panel-label">フリーワード</label>
+		    <label class="panel-label">キーワード</label>
 			<input type="text" class="input-field" placeholder="スタジオ名・駅名など">
 		</li>
 		<li>
@@ -116,12 +116,13 @@ class panelClass {
 </div>
 <?php
 	}
-	public function getSearch($option,$category){
+	public function getSearch($option,$category,$pref_id = NULL){
 		$dataClass = new dataClass;
-		
+		$class_name = NULL;
+		if($line != NULL) $class_name = ' line-control';
 ?>
 
-<div class="search-control">
+<div class="search-control<?php echo $class_name; ?>">
     <div class="wrapper">
         <div class="row">
             <div class="field-group">
@@ -129,7 +130,12 @@ class panelClass {
                 <select class="input-field pref-select">
                     <option>すべて</option>
                     <?php foreach($dataClass->prefArray() as $key => $value) : ?>
-                    <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+                    <?php
+                        $selected = NULL;
+                        if( $pref_id != NULL && $key == $pref_id) $selected = ' selected';
+                    
+                    ?>
+                    <option value="<?php echo $key; ?>"<?php echo $selected; ?>><?php echo $value; ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -141,6 +147,29 @@ class panelClass {
                     <?php foreach($dataClass->getCity(13) as $key => $value) : ?>
                     <option value="<?php echo $value[3]; ?>"><?php echo $value[1]; ?></option>
                     <?php endforeach; ?>
+                </select>
+                <?php endif; ?>
+                <?php if($option == 'station') : ?>
+                <?php $pl = $dataClass->getPrefline(13); ?>
+                <label>路線・駅</label>
+                <select class="input-field city-select">
+                    <option>すべて</option>
+                    <?php
+                        global $term;
+                        foreach( $pl as $plValue) :
+                            $li = $dataClass->getLine($plValue[1]);
+                            echo '<optgroup label="'. $li[1] .'">';
+                            foreach ($dataClass->getStation($plValue) as $stKey => $stValue) :
+                                $st_id = $plValue[1].'-'.$stValue[1];
+                                $selected = NULL;
+                                if($st_id == $term) $selected = ' selected';
+                    ?>
+                    <option value="<?php echo $plValue[1]; ?>-<?php echo $stValue[1]; ?>"<?php echo $selected; ?>><?php echo $stValue[2]; ?></option>
+                    <?php
+                            endforeach;
+                            echo '</optgroup>';
+                        endforeach;
+                    ?>
                 </select>
                 <?php endif; ?>
                 <?php if($option == 'date') : ?>
@@ -172,6 +201,23 @@ class panelClass {
                     <option>新着順</option>
                     <option>更新順</option>
                     <option>人気順</option>
+                </select>
+                <?php endif; ?>
+                <?php if($option == 'type') : ?>
+                <label>職種</label>
+                <select class="input-field date-select">
+                    <option>すべて</option>
+                    <option>スタジオスタッフ</option>
+                    <option>スタジオマネージャー</option>
+                    <option>インストラクター</option>
+                    <option>企画</option>
+                    <option>営業</option>
+                    <option>販売／接客</option>
+                    <option>ライター</option>
+                    <option>カメラマン</option>
+                    <option>コンテンツクリエイター</option>
+                    <option>読者モデル</option>
+                    <option>ブロガー</option>
                 </select>
                 <?php endif; ?>
                 <?php if($option == 'license') : ?>
@@ -215,6 +261,26 @@ class panelClass {
                 </select>
                 <?php endif; ?>
                 <?php if($category == 'sort') : ?>
+                <label>並び順</label>
+                <select class="input-field date-select">
+                    <option>新着順</option>
+                    <option>更新順</option>
+                    <option>人気順</option>
+                </select>
+                <?php endif; ?>
+                <?php if($category == 'status') : ?>
+                <label>雇用形態</label>
+                <select class="input-field date-select">
+                    <option>すべて</option>
+                    <option>正社員</option>
+                    <option>アルバイト・パート</option>
+                    <option>契約社員</option>
+                    <option>業務委託</option>
+                    <option>在宅</option>
+                    <option>その他</option>
+                </select>
+                <?php endif; ?>
+                <?php if($line != NULL) : ?>
                 <label>並び順</label>
                 <select class="input-field date-select">
                     <option>新着順</option>

@@ -29,9 +29,15 @@
             @include background-image(linear-gradient(120deg, darken($job,20%), lighten($job,10%)));
         }
     }
+    .page-signup &,
+    .page-forget &,
+    .page-register &,
     .single-list &,
     .page-schedule & {
         height: 86px;
+    }
+    .page-login & {
+        height: 100vh;
     }
 }
 

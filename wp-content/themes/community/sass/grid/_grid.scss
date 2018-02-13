@@ -91,6 +91,28 @@ span.hidden-sp {
     flex-wrap: wrap;
 }
 
+.ln_solid {
+    width: 100%;
+    border-top: 1px solid $border;
+    color: transparent;
+    background-color: transparent;
+    height: 1px;
+    margin: 15px 0;
+    text-align: center;
+    clear: both;
+    display: inline-block;
+    position: relative;
+    span {
+        width: 80px;
+        margin-left: -40px;
+        color: $gray;
+        background: $white;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+    }
+}
+
 @media screen and (max-width:$sp-width){
     
 html {

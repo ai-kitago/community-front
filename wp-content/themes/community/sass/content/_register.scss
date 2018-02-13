@@ -1,0 +1,48 @@
+.page-register {
+    .form-private {
+        width: 500px;
+        padding: 30px;
+        margin: auto;
+        background: $white;
+        @include border-radius(4px);
+        @include pie-clearfix;
+        .term-box {
+            height: 200px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            white-space: pre-line;
+            overflow: auto;
+        }
+        label {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .cntr {
+            width: 100%;
+            .checkbox-parts {
+                &:before {
+                    top: -2px;
+                }
+                &:after {
+                    top: -5px;
+                }
+            }
+        }
+        .lost {
+            font-size: 14px;
+        }
+        .fa {
+            margin-right: 10px;
+        }
+        .dropzone {
+            .dz-preview {
+                .dz-image {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -231,13 +231,17 @@ function get_custom_post_type_template( $archive_template ) {
 add_filter( 'archive_template', 'get_custom_post_type_template' ) ;
 */
 function get_custom_taxonomy_template($taxonomy_template) {
-    global $term;
-    if(is_tax('area') && is_numeric($term)) {
-        $taxonomy_template = locate_template( 'taxonomy-city.php' );
-    }elseif(is_tax('area') && $term == 'list'){
-    	$taxonomy_template = locate_template( 'taxonomy-list.php' );
-    }
-    return $taxonomy_template;
-
+	global $term;
+	$obj = get_term_by('slug',$term,'area');
+	$parent = get_term($obj->parent, 'area');
+	//var_dump($parent->slug);
+	if(is_tax('area') && $parent->slug == 'city') {
+		$taxonomy_template = locate_template( 'taxonomy-city.php' );
+	} elseif(is_tax('area') && $parent->slug == 'line') {
+		$taxonomy_template = locate_template( 'taxonomy-line.php' );
+	} elseif(is_tax('area') && $term == 'list'){
+		$taxonomy_template = locate_template( 'taxonomy-list.php' );
+	}
+	return $taxonomy_template;
 }
 add_filter( 'taxonomy_template', 'get_custom_taxonomy_template' );
