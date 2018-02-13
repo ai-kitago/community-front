@@ -205,6 +205,12 @@ function my_rewrite_rules_array( $rules ) {
 add_filter( 'rewrite_rules_array', 'my_rewrite_rules_array' );
 */
 
+/**
+ * Calendar Class
+ */
+require get_template_directory() . '/inc/calendarClass.php';
+$calendarClass = new calendarClass;
+
 function add_list_template( $single_template ) {
     $new_template = $single_template;
     

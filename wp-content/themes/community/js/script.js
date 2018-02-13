@@ -170,3 +170,36 @@ jQuery(function($){
     });
 });
 
+jQuery(function($){
+    monthlyRefresh();
+    function monthlyRefresh(){
+    if(!$('#monthly').length) return;
+    $('#monthly').empty();
+    $('#monthly').monthly({
+        disablePast: true,
+      mode: 'event',
+      dataType: 'json',
+      events: eventjson
+    });
+    var sep = '-';
+    var newDate = new Date();
+    var now = newDate.getFullYear() + sep + (newDate.getMonth() + 1) + sep + 1;
+    var next = newDate.getFullYear() + sep + (newDate.getMonth() + 2) + sep + 1;
+    if($('.monthly-day-event').attr('data-date') == now ) {
+        $('.monthly-prev').hide();
+    }
+    $('.monthly-next').on('click',function(){
+      if($('.monthly-day-event').attr('data-date') == now ) {
+        $('.monthly-next').hide();
+        $('.monthly-prev').show();
+        //$('monthly-reset').remove();
+      }
+    });
+    $('.monthly-prev').on('click',function(){
+      if($('.monthly-day-event').attr('data-date') == next ) {
+        $('.monthly-next').show();
+        $('.monthly-prev').hide();
+      }
+    });
+	}
+})

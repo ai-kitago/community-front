@@ -103,6 +103,18 @@ function front_footer_script() {
             false,
             true
         );
+        
+        wp_enqueue_script(
+            'monthlyjs',
+            get_template_directory_uri().'/lib/monthly/js/monthly.js',
+            array('jquery'),
+            false,
+            true
+        );
+        wp_enqueue_style(
+            'monthlycss',
+            get_template_directory_uri().'/lib/monthly/css/monthly.css'
+        );
 
         /*
         wp_enqueue_script(

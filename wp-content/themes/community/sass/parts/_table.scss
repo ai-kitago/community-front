@@ -56,4 +56,19 @@
     }
 }
 
+.table-program {
+    width: 100%;
+    margin: auto;
+    tbody {
+        th,td {
+            width: 100%;
+            padding: 10px;
+            display: block;
+        }
+        th {
+            border-right: none;
+        }
+    }
+}
+
 }
