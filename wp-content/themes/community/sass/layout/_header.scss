@@ -17,11 +17,17 @@
     body.page-schedule &,
     body.page-event &,
     body.page-job &,
+    body.single-job &,
+    body.page-shop &,
+    body.single-shop &,
+    body.page-company &,
     body.tax-area &,
+    body.page-business &,
     body.page-register &,
     body.page-signup &,
     body.page-forget &,
-    body.page-login &{
+    body.page-login &,
+    body.search & {
         background-color: rgba(0,0,0,0);
     }
 }
@@ -29,8 +35,10 @@
     padding: 18px 0;
     //float: left;
     position: absolute;
-    left: 30px;
+    left: 20px;
     .custom-logo {
+        width: 200px;
+        height: auto;
         display: block;
     }
     a {
@@ -50,7 +58,9 @@
         li {
             display: inline-block;
             a {
-                padding: 30px 15px;
+                padding: 35px 10px;
+                font-size: 15px;
+                line-height: 1;
                 color: $white;
                 display: block;
                 @include transition-duration(0.5s);
@@ -64,13 +74,10 @@
 
 .header-icon-nav {
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 14px;
     .button-icon {
         float: left;
-        //position: absolute;
-        //top: 14px;
-        //right: 90px;
     }
 }
 
@@ -78,6 +85,7 @@
 @media screen and (max-width:$sp-width){
 
 .site-header {
+    height: 60px;
     body.home &,
     body.single &,
     body.page-studio &,

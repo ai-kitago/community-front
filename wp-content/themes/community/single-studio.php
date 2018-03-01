@@ -32,6 +32,14 @@ get_header(); ?>
 							<p class="entry-company-name"><?php echo $post['company']; ?></p>
 							<p class="entry-description"><?php echo $post['description']; ?></p>
 							<div class="entry-tel"><a href="tel:03-6825-6007">03-6825-6007</a></div>
+							<div class="social-icon">
+								<ul>
+									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></li>
+									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
 						</header>
 					</div>
 				</section>
@@ -65,6 +73,13 @@ get_header(); ?>
 									</li>
 								</ul>
 							</div>
+
+							<h3>ヒトコト</h3>
+							<p class="mb-pc-20">「Life in Peace」平和な生活や人生。平和だからこそヨガや音楽、アートも楽しめる。
+本当に当たり前でこんなに普通な事に思えても、叶わない国や地域もあるのが現実。
+DUSKは何か特別な活動でも平和を叫び訴えるイベントでもありませんが、
+平和を感じ、願い、そして少し感謝するというテーマがあります。（ヒトコト）</p>
+							
 							<div class="row">
 								<div class="col-pc-6 col-sp-12">
 									<table class="detail-table">
@@ -74,13 +89,26 @@ get_header(); ?>
 												<td>5,000円</td>
 											</tr>
 											<tr>
-												<th>システム</th>
+												<th>基本料金</th>
 												<td>単発利用：3,200円 / 1回<br>レギュラークラス：2,800円 / 1回</td>
 											</tr>
 											<tr>
-												<th>クラス内容</th>
+												<th>お支払方法</th>
 												<td>
-													<span class="tag">ハタヨガ</span><span class="tag">アーユルヴェーダ</span><span class="tag">常温ヨガ</span><span class="tag">シヴァナンダヨガ</span>
+													<span class="tag">マスターカード</span><span class="tag">VISA</span><span class="tag">JCB</span>
+												</td>
+											</tr>
+											<tr>
+												<th>オプション</th>
+												<td>
+													<span class="tag">シャワールーム</span><span class="tag">初心者歓迎</span><span class="tag">レンタルスタジオ</span>
+												</td>
+											</tr>
+											<tr>
+												<th>レンタル</th>
+												<td>
+													レンタルスタジオは1週間前までに予約が必要です。
+													レンタルはお電話かメールで受付可能です。
 												</td>
 											</tr>
 										</tbody>
@@ -107,6 +135,12 @@ get_header(); ?>
 												<th>定休日</th>
 												<td>水曜</td>
 											</tr>
+											<tr>
+												<th>クラス内容</th>
+												<td>
+													<span class="tag">ハタヨガ</span><span class="tag">アーユルヴェーダ</span><span class="tag">常温ヨガ</span><span class="tag">シヴァナンダヨガ</span>
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>
@@ -122,6 +156,7 @@ get_header(); ?>
 						</footer>
 					</div>
 				</section>
+
 				<section class="entry-section instructor">
 					<div class="wrapper">
 						<header class="section-header">
@@ -141,9 +176,18 @@ get_header(); ?>
 								endforeach;
 							?>
 							</div>
+							<div class="row">
+								<div class="col-pc-12 col-sp-12">
+									<div class="enclose-frame">
+										<h3>その他インストラクター</h3>
+										<p>なまえ、名まえ、なまえ</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
+
 				<section class="entry-section access">
 					<div class="wrapper">
 						<header class="section-header">
@@ -175,16 +219,27 @@ get_header(); ?>
 				<section class="entry-section job">
 					<div class="wrapper">
 						<header class="section-header">
-							<h2 class="section-title">求人<span class="category-color">JOB</span></h2>
+							<h2 class="section-title">関連情報<span class="category-color">RELATED</span></h2>
 						</header>
 						<div class="section-content">
 							<div class="row row-height">
 							<?php
-								$max = 3;
+								$max = 2;
 								$i = 0;
 								$blockClass = 'col-pc-4 col-sp-12';
 								foreach ($dataClass->getData() as $key => $value) :
 									if($value['post_type'] == 'job' && $i < $max && $value['author'] == 'OHANAsmile inc.') :
+										include(get_template_directory().'/template-parts/content-block.php');
+										$i++;
+									endif;
+								endforeach;
+							?>
+							<?php
+								$max = 1;
+								$i = 0;
+								$blockClass = 'col-pc-4 col-sp-12';
+								foreach ($dataClass->getData() as $key => $value) :
+									if($value['post_type'] == 'event' && $i < $max) :
 										include(get_template_directory().'/template-parts/content-block.php');
 										$i++;
 									endif;

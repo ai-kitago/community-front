@@ -24,7 +24,7 @@ get_header(); ?>
 				<section class="front-section studio">
 					<div class="wrapper">
 						<header class="section-header">
-							<h2 class="section-title">ヨガスタジオ・教室を探す<span class="category-color">STUDIO SEARCH</span></h2>
+							<h2 class="section-title"><span class="city"><?php single_term_title(); ?></span>ヨガスタジオ・教室を探す<span class="category-color">STUDIO SEARCH</span></h2>
 						</header>
 						<div class="section-content">
 							<form action="./list/" method="get">

@@ -1,0 +1,45 @@
+@import "compass";
+//@import "grid/responsive";
+
+$green: #3cb371;
+
+#gpsearch-map {
+    width: 90%;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(229, 227, 223);
+}
+
+.wp-core-ui {
+    .button {
+        &.button-gpsearch {
+            color: #fff !important;
+            background: $green !important;
+            border-color: darken($green,10%) !important;
+            @include box-shadow(0 1px 0 darken($green,10%));
+            @include text-shadow(0 1px 1px darken($green,15%));
+        }
+    }
+}
+
+@media screen and (max-width:640px){
+
+.gpSearch-wrap {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    .text {
+        width: 100%;
+    }
+    .button {
+        width: 100%;
+    }
+}
+
+#gpsearch-map {
+    width: 100%;
+    margin-right: 0;
+}
+
+}

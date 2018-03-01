@@ -26,8 +26,8 @@ get_header(); ?>
 						</header>
 						<div id="tabs" class="tabs">
 							<ul class="tabs-ul ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header" role="tablist">
-								<li class="tabs-li"><a href="#private">個人登録</a></li>
-								<li class="tabs-li"><a href="#company">企業登録</a></li>
+								<li class="tabs-li"><a href="#private">プライベート登録</a></li>
+								<li class="tabs-li"><a href="#company">ビジネス登録</a></li>
 							</ul>
 							<div id="private" class="tab-content signup-box">
 								<form action="./register/" method="post">
@@ -68,7 +68,7 @@ get_header(); ?>
 								</form>
 							</div>
 							<div id="company" class="tab-content signup-box">
-								<form method="post">
+								<form action="./business/" method="post">
 								<div class="row row-height">
 									<div class="col-pc-12">
 										<div class="form-signup">
@@ -77,16 +77,8 @@ get_header(); ?>
 													<label>メールアドレス</label>
 													<input type="text" class="input-field">
 												</div>
-												<div class="col-pc-12 col-sp-12 mb-pc-10">
-													<label>パスワード</label>
-													<input type="password" class="input-field">
-												</div>
-												<div class="col-pc-12 col-sp-12 mb-pc-30">
-													<label>パスワード（確認用）</label>
-													<input type="password" class="input-field">
-												</div>
 												<div class="col-pc-6 col-pc-offset-3 col-sp-12 mb-pc-20">
-													<input class="button button-block" type="submit" value="登録">
+													<input class="button button-block" type="submit" value="次へ">
 												</div>
 												<div class="col-pc-6 col-pc-offset-3 col-sp-12">
 													<a href="<?php echo get_permalink( get_page_by_path('login')->ID ); ?>" class="button button-border button-block">ログイン</a>

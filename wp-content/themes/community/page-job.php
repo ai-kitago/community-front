@@ -31,7 +31,7 @@ get_header(); ?>
 						</ul>
 					</div>
 				</header>
-				<form action="/schedule/" method="get">
+				<form action="/job/list/" method="get">
 				<?php
 					$panelClass->getSearch('type','status');
 				?>
@@ -69,7 +69,7 @@ get_header(); ?>
 						<footer class="section-footer">
 							<div class="row">
 								<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">おすすめ求人情報<small class="category-color">PICK UP</small></a>
+									<a href="<?php echo get_permalink( get_page_by_path('job')->ID ); ?>" class="button button-footer">おすすめ求人情報<small class="category-color">PICK UP</small></a>
 								</div>
 							</div>
 						</footer>
@@ -110,21 +110,6 @@ get_header(); ?>
 					</div>
 				</section>
 			</article>
-			
-			<?php
-			/*
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			*/
-			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

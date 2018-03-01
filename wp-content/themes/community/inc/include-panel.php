@@ -11,6 +11,14 @@ class panelClass {
 			<input type="text" class="input-field" placeholder="スタジオ名・駅名など">
 		</li>
 		<li>
+            <label class="panel-label">並び順</label>
+            <ul class="ul-sort">
+                <li class="li-sort"><label><input type="radio" name="sort[]" checked>新着順</lebel></li>
+                <li class="li-sort"><label><input type="radio" name="sort[]">更新順</lebel></li>
+                <li class="li-sort"><label><input type="radio" name="sort[]">人気順</lebel></li>
+            </ul>
+        </li>
+		<li>
             <label class="panel-label">スタイル</label>
 			<div class="cntr checkbox">
 			    <label for="cbx-style-01">
@@ -249,6 +257,8 @@ class panelClass {
                     <option>すべて</option>
                     <option>イベント</option>
                     <option>ワークショップ</option>
+                    <option>指導者養成講座</option>
+                    <option>その他</option>
                 </select>
                 <?php endif; ?>
                 <?php if($category == 'style') : ?>

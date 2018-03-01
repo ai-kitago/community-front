@@ -7,12 +7,16 @@
     .single-list &,
     .page-schedule &,
     .page-event &,
+    .page-job &,
+    .page-shop &,
+    .page-company &,
     .page-signup &,
+    .page-business &,
     .page-register &,
     .page-login &,
     .page-forget &,
-    .page-job &,
-    .tax-area & {
+    .tax-area &,
+    body.search & {
         padding-top: 0;
     }
 }

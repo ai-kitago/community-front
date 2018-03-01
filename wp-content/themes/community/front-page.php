@@ -69,6 +69,7 @@ get_header(); ?>
 					</footer>
 				</div>
 			</section>
+
 			<section class="front-section event">
 				<div class="wrapper">
 					<header class="section-header">
@@ -93,12 +94,13 @@ get_header(); ?>
 					<footer class="section-footer">
 						<div class="row">
 							<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-								<a href="#" class="button button-footer">イベントを探す<small class="category-color">ALL EVENT</small></a>
+								<a href="<?php echo get_permalink( get_page_by_path('event')->ID ); ?>" class="button button-footer">イベントを探す<small class="category-color">ALL EVENT</small></a>
 							</div>
 						</div>
 					</footer>
 				</div>
 			</section>
+
 			<section class="front-section instructor">
 				<div class="wrapper">
 					<header class="section-header">
@@ -122,12 +124,44 @@ get_header(); ?>
 					<footer class="section-footer">
 						<div class="row">
 							<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-								<a href="#" class="button button-footer">インストラクターを探す<small class="category-color">ALL INSTRUCTOR</small></a>
+								<a href="<?php echo get_permalink( get_page_by_path('instructor')->ID ); ?>" class="button button-footer">インストラクターを探す<small class="category-color">ALL INSTRUCTOR</small></a>
 							</div>
 						</div>
 					</footer>
 				</div>
 			</section>
+			
+			<section class="front-section shop">
+				<div class="wrapper">
+					<header class="section-header">
+						<h2 class="section-title">ショップを探す<span class="category-color">SHOP SEARCH</span></h2>
+					</header>
+					<div class="section-content">
+						<h3 class="latest-title"><span>LATEST ENTRIES</span></h3>
+						<div class="row row-height">
+						<?php
+							$max = 4;
+							$i = 0;
+							$blockClass = 'col-pc-3 col-sp-12';
+							foreach ($dataClass->getData() as $key => $value) :
+								if($value['post_type'] == 'shop' && $i < $max) :
+									include(get_template_directory().'/template-parts/content-block.php');
+									$i++;
+								endif;
+							endforeach;
+						?>
+						</div>
+					</div>
+					<footer class="section-footer">
+						<div class="row">
+							<div class="col-pc-4 col-pc-offset-4 col-sp-12">
+								<a href="<?php echo get_permalink( get_page_by_path('shop')->ID ); ?>" class="button button-footer">ショップを探す<small class="category-color">ALL EVENT</small></a>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</section>
+
 			<section class="front-section job">
 				<div class="wrapper">
 					<header class="section-header">
@@ -152,12 +186,13 @@ get_header(); ?>
 					<footer class="section-footer">
 						<div class="row">
 							<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-								<a href="#" class="button button-footer">仕事を探す<small class="category-color">ALL JOB</small></a>
+								<a href="<?php echo get_permalink( get_page_by_path('job')->ID ); ?>" class="button button-footer">仕事を探す<small class="category-color">ALL JOB</small></a>
 							</div>
 						</div>
 					</footer>
 				</div>
 			</section>
+
 			<section class="front-section company">
 				<div class="wrapper">
 					<header class="section-header">
@@ -171,7 +206,7 @@ get_header(); ?>
 							$blockClass = 'col-pc-2 col-sp-4';
 							foreach ($dataClass->getData() as $key => $value) :
 								if($value['post_type'] == 'company' && $i < $max) :
-									include(get_template_directory().'/template-parts/content-company-block.php');
+									include(get_template_directory().'/template-parts/content-logo-block.php');
 									$i++;
 								endif;
 							endforeach;
@@ -181,7 +216,7 @@ get_header(); ?>
 					<footer class="section-footer">
 						<div class="row">
 							<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-								<a href="#" class="button button-footer">企業から探す<small class="category-color">ALL COMPANY</small></a>
+								<a href="<?php echo get_permalink( get_page_by_path('company')->ID ); ?>" class="button button-footer">企業から探す<small class="category-color">ALL COMPANY</small></a>
 							</div>
 						</div>
 					</footer>

@@ -1,4 +1,4 @@
-<div class="col-coupon col-pc-4 col-sp-12">
+<div class="col-coupon col-pc-4 col-sp-12 mb-sp-20">
     <div class="coupon">
         <label class="coupon-trigger" for="modal-coupon-<?php echo $key; ?>">
             <i class="fa fa-ticket" aria-hidden="true"></i>

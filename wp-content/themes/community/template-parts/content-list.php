@@ -20,10 +20,15 @@
 			<div class="list-meta">
 				<span class="list-label category-color">新着</span>
 				<span class="list-pref"><?php echo $dataClass->prefArray($value['pref_code']); ?></span>
-				<span class="list-city"><i class="fa fa-map-marker"></i>目黒区</span>
-				<span class="list-station"><i class="fa fa-train"></i>祐天寺駅</span>
+				<span class="list-city"><a href="#"><i class="fa fa-map-marker"></i>目黒区</a></span>
+				<span class="list-station"><a href="#"><i class="fa fa-train"></i>祐天寺駅</a></span>
 				<time class="list-date"><?php echo date('Y.m.d',strtotime($value['date'])); ?></time>
 			</div>
+			<?php if($_GET['gps'] == 1) : ?>
+			<div class="list-gps">
+				<span>現在地から<bold>12km</bold></span>
+			</div>
+			<?php endif; ?>
 			<a href="<?php echo $href; ?>">
 				<h3 class="list-title"><?php echo mb_strimwidth($value['title'],0,46,'…','UTF-8'); ?><span class="list-subtitle"><?php echo $value['shop_name']; ?></span></h3>
 			</a>

@@ -95,3 +95,14 @@
         display: block;
     }
 }
+
+@media screen and (max-width:$sp-width){
+
+.section-title {
+    font-size: 18px;
+    span {
+        font-size: 13px;
+    }
+}
+
+}

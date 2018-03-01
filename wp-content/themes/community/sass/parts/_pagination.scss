@@ -26,6 +26,26 @@
             border: 1px solid $studio;
             border-left-width: 0;
         }
+        .single-shop & {
+            color: $shop;
+            border: 1px solid $shop;
+            border-left-width: 0;
+        }
+        .single-job & {
+            color: $job;
+            border: 1px solid $job;
+            border-left-width: 0;
+        }
+        .single-company & {
+            color: $company;
+            border: 1px solid $company;
+            border-left-width: 0;
+        }
+        body.search & {
+            color: $search;
+            border: 1px solid $search;
+            border-left-width: 0;
+        }
         min-width: 50px;
         min-height: 50px;
     }
@@ -34,6 +54,7 @@
             a {
                 &:hover {
                     color: $white;
+                    @include opacity(0.85);
                     .single-instructor & {
                         background-color: $instructor;
                     }
@@ -45,7 +66,18 @@
                     .tax-area & {
                         background-color: $studio;
                     }
-                    @include opacity(0.85);
+                    .single-shop & {
+                        background-color: $shop;
+                    }
+                    .single-job & {
+                        background-color: $job;
+                    }
+                    .single-company & {
+                        background-color: $company;
+                    }
+                    body.search & {
+                        background-color: $search;
+                    }
                 }
             }
         }
@@ -96,6 +128,8 @@
  
 .pagination li.current a {
     color: $white;
+    cursor: default;
+    pointer-events: none;
     .single-instructor & {
         background-color: $instructor;
     }
@@ -107,8 +141,18 @@
     .tax-area & {
         background-color: $studio;
     }
-    cursor: default;
-    pointer-events: none;
+    .single-shop & {
+        background-color: $shop;
+    }
+    .single-job & {
+        background-color: $job;
+    }
+    .single-company & {
+        background-color: $company;
+    }
+    body.search & {
+        background-color: $search;
+    }
 }
  
 .pagination > li:first-child > a {

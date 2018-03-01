@@ -46,8 +46,8 @@
 	</header><!-- #masthead -->
 	<div class="header-search">
 		<div class="search-form">
-			<form action="/search/" method="get">
-				<input type="text" class="field-search" name="s" placeholder="キーワード">
+			<form action="/" method="get">
+				<input type="text" class="field-search" name="s" value="<?php echo get_search_query() ?>" placeholder="キーワード">
 				<span>Enterを押して検索</span>
 			</form>
 		</div>

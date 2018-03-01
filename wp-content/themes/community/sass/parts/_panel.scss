@@ -37,6 +37,36 @@
     margin-bottom: 10px;
 }
 
+.ul-sort {
+    margin-bottom: 10px;
+    @include pie-clearfix;
+    .li-sort {
+        width: 33.33333%;
+        border-top: 1px solid $border;
+        border-right: 1px solid $border;
+        border-bottom: 1px solid $border;
+        float: left;
+        &:first-child {
+            border-left: 1px solid $border;
+            @include border-radius(4px 0 0 4px);
+        }
+        &:last-child {
+            @include border-radius(0 4px 4px 0);
+        }
+        label {
+            padding: 8px;
+            cursor: pointer;
+            display: block;
+            &:hover {
+                @include opacity(0.85);
+            }
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
 .panel-checkbox {
     width: 100%;
     margin-bottom: 30px;

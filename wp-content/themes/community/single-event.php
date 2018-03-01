@@ -29,19 +29,43 @@ get_header(); ?>
 						<header class="entry-header">
 							<span class="category-name category-color align-center">YOGA EVENT</span>
 							<h1 class="entry-title"><?php the_title(); ?></h1>
-							<p class="entry-company-name"><?php echo 'dusk inc.'; ?></p>
-							<p class="entry-description"><?php echo 'True Nature TOKYOは東京タワーの麓で行われる夜のパークヨガ！さらに音楽やアートを楽しみながら想いをひとつに！'; ?></p>
+							<p class="entry-company-name"><?php echo 'dusk inc.（主催名）'; ?></p>
+							<p class="entry-description"><?php echo 'True Nature TOKYOは東京タワーの麓で行われる夜のパークヨガ！さらに音楽やアートを楽しみながら想いをひとつに！（紹介文）'; ?></p>
 							<div class="social-icon">
 								<ul>
 									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a></li>
 									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+									<li><a href="#" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
 								</ul>
 							</div>
 						</header>
 					</div>
 				</section>
+				
+				<section class="entry-section">
+					<div class="wrapper">
+						<header class="section-header">
+							<h2 class="section-title">開催日程<span class="category-color">SCHEDULE</span></h2>
+						</header>
+						<div class="entry-content">
+							<div class="row">
+								<div class="col-pc-8 col-pc-offset-2 col-sp-12">
+									<ul class="program-ul">
+										<li><span class="program-num">1.</span><span class="program-date"><time class="start-time">2018年2月18日（日）10:00～18:00</time></span></li>
+										<li><span class="program-num">2.</span><span class="program-date"><time class="start-time">2018年2月19日（月）10:00～18:00</time></span></li>
+										<li><span class="program-num">3.</span><span class="program-date"><time class="start-time">2018年2月20日（火）10:00～18:00</time></span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<footer class="entry-footer">
+
+						</footer>
+					</div>
+				</section>
+
 				<section class="entry-section">
 					<div class="wrapper">
 						<header class="section-header">
@@ -62,25 +86,26 @@ get_header(); ?>
 									</li>
 								</ul>
 							</div>
+							<h3>内容</h3>
+							<p class="mb-pc-20">「Life in Peace」平和な生活や人生。平和だからこそヨガや音楽、アートも楽しめる。
+本当に当たり前でこんなに普通な事に思えても、叶わない国や地域もあるのが現実。
+DUSKは何か特別な活動でも平和を叫び訴えるイベントでもありませんが、
+平和を感じ、願い、そして少し感謝するというテーマがあります。（イベント内容）</p>
 							<div class="row">
 								<div class="col-pc-6 col-sp-12">
 									<table class="detail-table">
 										<tbody>
 											<tr>
-												<th>開催日程</th>
-												<td>2018年2月18日（土）</td>
+												<th>会場</th>
+												<td>ザ・プリンス パークタワー東京 プリンスホテル</td>
 											</tr>
 											<tr>
 												<th>費用</th>
 												<td>5,000円（税込）</td>
 											</tr>
 											<tr>
-												<th>参加対象</th>
-												<td>ヨガインストラクター2年以上またはRYT200講座修了</td>
-											</tr>
-											<tr>
-												<th>持ち物</th>
-												<td>ヨガマット、筆記用具</td>
+												<th>定員</th>
+												<td>200人</td>
 											</tr>
 										</tbody>
 									</table>
@@ -89,17 +114,12 @@ get_header(); ?>
 									<table class="detail-table">
 										<tbody>
 											<tr>
-												<th>イベント内容</th>
-												<td>「Life in Peace」平和な生活や人生。平和だからこそヨガや音楽、アートも楽しめる。
-本当に当たり前でこんなに普通な事に思えても、叶わない国や地域もあるのが現実。
-DUSKは何か特別な活動でも平和を叫び訴えるイベントでもありませんが、
-平和を感じ、願い、そして少し感謝するというテーマがあります。</td>
+												<th>参加対象</th>
+												<td>ヨガインストラクター2年以上またはRYT200講座修了</td>
 											</tr>
 											<tr>
-												<th>イベントタグ</th>
-												<td>
-													<span class="tag">ハタヨガ</span><span class="tag">アーユルヴェーダ</span><span class="tag">常温ヨガ</span><span class="tag">シヴァナンダヨガ</span>
-												</td>
+												<th>持ち物</th>
+												<td>ヨガマット、筆記用具</td>
 											</tr>
 										</tbody>
 									</table>
@@ -115,7 +135,7 @@ DUSKは何か特別な活動でも平和を叫び訴えるイベントでもあ�
 						</footer>
 					</div>
 				</section>
-				
+
 				<section class="entry-section">
 					<div class="wrapper">
 						<header class="section-header">
@@ -126,8 +146,8 @@ DUSKは何か特別な活動でも平和を叫び訴えるイベントでもあ�
 								<tbody>
 									<tr>
 										<th>10:00～11:00</th>
-										<td>ヨガクラスヨガクラスヨガクラスヨガクラス
-										ヨガクラスヨガクラスヨガクラスヨガクラス
+										<td>ヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラス
+										ヨガクラスヨガクラスヨガクラスヨガクラスヨガクラス
 										ヨガクラスヨガクラスヨガクラスヨガクラス</td>
 									</tr>
 									<tr>
@@ -136,14 +156,14 @@ DUSKは何か特別な活動でも平和を叫び訴えるイベントでもあ�
 									</tr>
 									<tr>
 										<th>13:00～14:00</th>
-										<td>ヨガクラスヨガクラスヨガクラスヨガクラス
+										<td>ヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラス
 										ヨガクラスヨガクラスヨガクラスヨガクラス</td>
 									</tr>
 									<tr>
 										<th>15:00～16:00</th>
 										<td>ヨガクラスヨガクラスヨガクラスヨガクラス
-										ヨガクラスヨガクラスヨガクラスヨガクラス
-										ヨガクラスヨガクラスヨガクラスヨガクラス
+										ヨガクラスヨガクラスヨガクラスヨガクラスヨガクラス
+										ヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラスヨガクラス
 										ヨガクラスヨガクラスヨガクラスヨガクラス</td>
 									</tr>
 								</tbody>
@@ -158,7 +178,7 @@ DUSKは何か特別な活動でも平和を叫び訴えるイベントでもあ�
 				<section class="entry-section instructor">
 					<div class="wrapper">
 						<header class="section-header">
-							<h2 class="section-title">関連インストラクター<span class="category-color">instructor</span></h2>
+							<h2 class="section-title">出演インストラクター<span class="category-color">instructor</span></h2>
 						</header>
 						<div class="section-content">
 							<div class="row row-height">
@@ -173,6 +193,14 @@ DUSKは何か特別な活動でも平和を叫び訴えるイベントでもあ�
 									endif;
 								endforeach;
 							?>
+							</div>
+							<div class="row">
+								<div class="col-pc-12 col-sp-12">
+									<div class="enclose-frame">
+										<h3>登録がないインストラクター</h3>
+										<p>なまえ、名まえ、なまえ</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

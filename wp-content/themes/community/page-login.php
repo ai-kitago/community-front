@@ -45,7 +45,7 @@ get_header(); ?>
 												<input class="button button-block" type="submit" value="ログイン">
 											</div>
 											<div class="col-pc-12 mb-pc-10">
-												<a href="#" class="lost">※パスワードを忘れた方はこちら</a>
+												<a href="<?php echo get_permalink( get_page_by_path('forget')->ID ); ?>" class="lost">※パスワードを忘れた方はこちら</a>
 											</div>
 										</div>
 										<div class="row">

@@ -8,16 +8,67 @@
 
 .single-header {
     .single-studio &,
-    .single-event & {
+    .single-event &,
+    .single-job &,
+    .single-company &,
+    .single-shop & {
         height: 700px;
         background-size: cover;
         position: relative;
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0,0,0,0.1);
+        }
     }
     .single-license & {
         @include background-image(linear-gradient(120deg, darken($license,20%), lighten($license,10%)));
     }
     .single-instructor & {
         @include background-image(linear-gradient(120deg, darken($instructor,20%), lighten($instructor,10%)));
+    }
+}
+
+@media screen and (max-width:$sp-width){
+
+.single-header {
+    .single-studio &,
+    .single-event &,
+    .single-shop &,
+    .single-job & {
+        height: 50vh;
+    }
+}
+
+}
+
+.program-ul {
+    li {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid $border;
+        display: table;
+        &:first-child {
+            border-top: 1px solid $border;
+        }
+        .program-num {
+            padding: 10px;
+            vertical-align: middle;
+            display: table-cell;
+        }
+        .program-date {
+            padding: 10px;
+            vertical-align: middle;
+            display: table-cell;
+            .start-time {
+                margin-right: 10px;
+            }
+            .end-time {
+                margin-left: 10px;
+            }
+        }
     }
 }
 
@@ -44,6 +95,9 @@
     font-weight: bold;
 }
 
+body.single-company,
+body.single-job,
+body.single-shop,
 body.single-event,
 body.single-license,
 body.single-instructor,
@@ -53,6 +107,10 @@ body.single-studio {
         &:nth-of-type(odd){
             background: $section-bg;
         }
+        h3 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
     }
     .entry-header {
         padding: 30px 0 0;
@@ -61,6 +119,9 @@ body.single-studio {
     }
     .entry-content {
         margin-bottom: 40px;
+        p {
+            margin-bottom: 10px;
+        }
     }
     .category-name {
         margin-bottom: 20px;
@@ -84,7 +145,7 @@ body.single-studio {
         white-space: pre-wrap;
     }
     .entry-tel {
-        //margin-bottom: 30px;
+        margin-bottom: 30px;
         a {
             padding: 10px 20px;
             font-size: 18px;
@@ -128,15 +189,41 @@ body.single-studio {
     }
 }
 
+@media screen and (max-width:$sp-width){
+
+.gallery-ul {
+
+}
+
+.gallery-li {
+    width: 50%;
+}
+
+}
+
 .detail-table {
-    td,th {
-        padding: 15px;
-    }
     th {
-        min-width: 150px;
+        padding: 15px 15px 15px 0;
         font-weight: bold;
         vertical-align: top;
+        white-space: nowrap;
     }
+    td {
+        padding: 15px 0 15px 15px;
+    }
+}
+
+@media screen and (max-width:$sp-width){
+
+.detail-table {
+    td,th {
+        width: 100%;
+        display: block;
+    }
+    th {
+    }
+}
+
 }
 
 #gpsearch-map {
@@ -171,6 +258,67 @@ body.single-studio {
         display: none;
     }
 }
+
+@media screen and (max-width:$sp-width){
+
+.entry-news {
+    width: 100%;
+    margin: auto;
+    ul {
+        li {
+            padding: 20px 15px;
+            border-bottom: 1px solid $border;
+            cursor: pointer;
+            @include transition-duration(0.5s);
+            &:hover {
+                //background: rgba(255,255,255,0.2);
+                @include opacity(0.8);
+            }
+        }
+    }
+    .news-title {
+        padding: 0 50px 0 0;
+        font-weight: bold;
+    }
+    .news-content {
+        padding: 15px;
+        margin-top: 15px;
+        background: $section-bg;
+        @include border-radius(4px);
+        display: none;
+    }
+}
+
+}
+
+.entry-process {
+    width: 720px;
+    margin: auto;
+    ul {
+        li {
+            padding: 20px 15px;
+            border-bottom: 1px solid $border;
+            //cursor: pointer;
+            @include transition-duration(0.5s);
+            &:hover {
+                //background: rgba(255,255,255,0.2);
+                @include opacity(0.8);
+            }
+        }
+    }
+    .process-title {
+        padding: 0 50px 0 0;
+        font-weight: bold;
+    }
+    .process-content {
+        padding: 15px;
+        margin-top: 15px;
+        background: $section-bg;
+        @include border-radius(4px);
+        //display: none;
+    }
+}
+
 
 .entry-coupon {
     .coupon {
@@ -255,13 +403,87 @@ body.single-studio {
     bottom: -40px;
 }
 
+body.single-job,
+body.single-event,
+body.single-license,
+body.single-instructor,
+body.single-studio {
+    .entry-section {
+        padding: 60px 0;
+        &:nth-of-type(odd){
+            background: $section-bg;
+        }
+    }
+    .entry-header {
+        padding: 10px 0 0;
+        text-align: center;
+        //background: $section-bg;
+    }
+    .entry-content {
+        margin-bottom: 0;
+    }
+    .category-name {
+        margin-bottom: 20px;
+        display: block;
+    }
+    .entry-title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .entry-company-name {
+        margin-bottom: 30px;
+    }
+    .entry-description {
+        margin-bottom: 30px;
+    }
+    .entry-subname {
+        margin-bottom: 30px;
+    }
+    .entry-profile {
+        white-space: pre-wrap;
+    }
+    .entry-tel {
+        //margin-bottom: 30px;
+        a {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1;
+            color: $gray;
+            border: 1px solid $border;
+            @include border-radius(50px);
+            display: inline-block;
+        }
+    }
+    article {
+        h4 {
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 110%;
+            font-weight: bold;
+            border-bottom: 1px solid;
+            span {
+                padding-bottom: 6px;
+                border-bottom: 3px solid;
+            }
+        }
+    }
+}
+
 .detail-table {
     td,th {
-        padding: 15px;
+        padding: 15px 15px 15px 0;
     }
     th {
         min-width: auto;
         white-space: nowrap;
+    }
+}
+
+.access {
+    p {
+        margin-bottom: 20px;
     }
 }
 

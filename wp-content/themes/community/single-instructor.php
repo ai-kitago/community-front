@@ -62,6 +62,13 @@ get_header(); ?>
 
 幸せサイクルを生み出し、ストレスフリーな社会を作るため、
 今日も沢山の人にヨガを届けに行きます♪</p>
+									<h3>所属スタジオ</h3>
+									<p>オハナスマイルヨガスタジオ 祐天寺店</p>
+									<h3>取得資格</h3>
+									<p>全米ヨガアライアンスRYT200</p>
+									<h3>参加イベント</h3>
+									<p>dusk2018<br>
+yoga fest 2018</p>
 								</div>
 								<div class="col-pc-6 col-sp-12">
 									<div class="slick-profile">
@@ -124,6 +131,7 @@ get_header(); ?>
 						</section>
 					</div>
 				</section>
+				<!--
 				<section class="entry-section license">
 					<div class="wrapper">
 						<header class="section-header">
@@ -136,6 +144,8 @@ get_header(); ?>
 						</section>
 					</div>
 				</section>
+				-->
+
 				<section class="entry-section studio">
 					<div class="wrapper">
 						<header class="section-header">
@@ -159,6 +169,7 @@ get_header(); ?>
 						</section>
 					</div>
 				</section>
+
 				<section class="entry-section event">
 					<div class="wrapper">
 						<header class="section-header">

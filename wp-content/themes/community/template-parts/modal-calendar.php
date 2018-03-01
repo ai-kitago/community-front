@@ -18,7 +18,11 @@ var eventjson =
     {
       <?php
       echo '"id":'.$value['calendar_id'].',
-      "name":"'.$value['name'].'",
+      "name":"'.$value['name'].'<br>'.$value['content'].'<br>';
+      foreach($value['teacher'] as $val){
+        echo $calendarClass->getInstructor($val).' ';
+      }
+      echo '",
       "startdate":"'.$value['startdate'].'",
       "enddate":"'.$value['enddate'].'",
       "starttime":"'.$value['starttime'].'",

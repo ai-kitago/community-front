@@ -87,9 +87,11 @@ require_once (get_template_directory().'/inc/include-script.php');
 require_once (get_template_directory().'/inc/include-map.php');
 require_once (get_template_directory().'/inc/include-panel.php');
 require_once (get_template_directory().'/inc/dataClass.php');
+require_once (get_template_directory().'/inc/itemClass.php');
 $mapClass = new mapClass;
 $panelClass = new panelClass;
 $dataClass = new dataClass;
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

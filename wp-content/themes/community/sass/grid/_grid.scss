@@ -24,6 +24,14 @@ $sp-width: 640px;
 $col-padding: 15px;
 $sp-padding: 15px;
 
+@media screen and (max-width:$sp-width){
+
+body {
+    font-size: 15px;
+}
+
+}
+
 html {
     width: 100%;
     min-width: $max-width;

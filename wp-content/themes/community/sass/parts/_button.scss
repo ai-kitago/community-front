@@ -55,6 +55,11 @@
     &.button-primary {
         background: $primary;
     }
+    &.button-shop {
+        color: $white;
+        background: $shop;
+        //border: 1px solid $primary;
+    }
     &.button-white {
         color: $gray;
         background: $white;
@@ -123,6 +128,25 @@
             @include transform(scale(100));
             @include opacity(0.2);
         }
+    }
+}
+
+.button-gps {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    font-size: 13px;
+    background: $white;
+    outline: none;
+    cursor: pointer;
+    @include border-radius(40px);
+    display: block;
+    i {
+        font-size: 25px;
+        display: block;
+    }
+    &:hover {
+        @include opacity(0.85);
     }
 }
 

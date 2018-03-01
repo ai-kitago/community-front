@@ -70,7 +70,8 @@ get_header(); ?>
 																<div class="cntr checkbox">
 																	<label for="cbx-line-<?php echo $prefline_id; ?>-<?php echo $stationValue[1]; ?>">
 																		<input id="cbx-line-<?php echo $prefline_id; ?>-<?php echo $stationValue[1]; ?>" class="checkbox-input" type="checkbox">
-																		<span class="checkbox-parts"><?php echo $stationValue[2]; ?></span>
+																		<span class="checkbox-parts"></span>
+																		<a href="/studio/area/kanto/tokyo/line/<?php echo $prefline_id . '-' . $stationValue[1]; ?>/"><?php echo $stationValue[2]; ?></a>
 																	</label>
 																</div>
 																

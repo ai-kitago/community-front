@@ -1,0 +1,42 @@
+/* line 6, ../sass/style.scss */
+#gpsearch-map {
+  width: 90%;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e5e3df;
+}
+
+/* line 16, ../sass/style.scss */
+.wp-core-ui .button.button-gpsearch {
+  color: #fff !important;
+  background: #3cb371 !important;
+  border-color: #2f8d59 !important;
+  -moz-box-shadow: 0 1px 0 #2f8d59;
+  -webkit-box-shadow: 0 1px 0 #2f8d59;
+  box-shadow: 0 1px 0 #2f8d59;
+  text-shadow: 0 1px 1px #297a4d;
+}
+
+@media screen and (max-width: 640px) {
+  /* line 28, ../sass/style.scss */
+  .gpSearch-wrap {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 32, ../sass/style.scss */
+  .gpSearch-wrap .text {
+    width: 100%;
+  }
+  /* line 35, ../sass/style.scss */
+  .gpSearch-wrap .button {
+    width: 100%;
+  }
+
+  /* line 40, ../sass/style.scss */
+  #gpsearch-map {
+    width: 100%;
+    margin-right: 0;
+  }
+}

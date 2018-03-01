@@ -1,0 +1,48 @@
+.single-shop {
+    .item-trigger {
+        cursor: pointer;
+        display: block;
+        &:hover {
+            @include opacity(0.85);
+        }
+    }
+    .modal {
+        .modal-wrap {
+            width: 40%;
+            padding: 20px 20px;
+            img {
+                margin-bottom: 20px;
+            }
+            h2 {
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$sp-width){
+
+.single-shop {
+    .modal {
+        .modal-wrap {
+            width: 90%;
+            padding: 15px 15px;
+            img {
+                margin-bottom: 20px;
+            }
+            h2 {
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+}

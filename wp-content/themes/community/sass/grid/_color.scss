@@ -5,13 +5,38 @@ $category-color: (
     job: $job,
     company: $company,
     access: $access,
-    license: $license
+    license: $license,
+    shop: $shop,
+    search: $search
 );
 
 @each $category, $color in $category-color {
     .category-color {
         .#{$category} & {
             color: $color;
+        }
+        body div.#{$category} &,
+        body section.#{$category} & {
+            color: $color;
+        }
+    }
+    .block-label {
+        &.category-color {
+            body div.#{$category} &,
+            body section.#{$category} & {
+                color: $color;
+                border: 1px solid;
+            }
+        }
+    }
+    .block-post {
+        &.category-color {
+            body div.#{$category} &,
+            body section.#{$category} & {
+                color: $color;
+                //background: $color;
+                //border: 1px solid $color;
+            }
         }
     }
 }

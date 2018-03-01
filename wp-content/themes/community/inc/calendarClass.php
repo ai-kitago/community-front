@@ -49,5 +49,22 @@ class calendarClass {
         );
         return $array;
     }
+    public function getInstructor($id = NULL){
+        $array = array(
+            array('id' => '01','name' => '西浦莉紗','subname' => 'Risa Nishiura','area' => array(13,14,11),'status' => 'success'),
+            array('id' => '02','name' => 'ippei','subname' => NULL,'area' => array(13,14,11),'status' => 'success'),
+            array('id' => '03','name' => '上遠野 紗織','subname' => 'Saori Katohno','area' => array(13,14,11),'status' => 'nodata'),
+            array('id' => '04','name' => '佐藤おりえ','subname' => 'Orie Sato','area' => array(13,14,11),'status' => 'success'),
+            array('id' => '05','name' => '理美','subname' => 'さとみ','area' => array(13,14,11),'status' => 'nodata')
+        );
+        if(!is_null($id)){
+            foreach($array as $value){
+                if($value['id'] == $id){
+                    return $value['name'];
+                }
+            }
+        }
+        return $array;
+    }
 }
 ?>
