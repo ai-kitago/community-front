@@ -69,7 +69,7 @@ get_header(); ?>
 						<footer class="section-footer">
 							<div class="row">
 								<div class="col-pc-4 col-pc-offset-4 col-sp-12">
-									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">おすすめイベント<small class="category-color">PICK UP</small></a>
+									<a href="<?php echo get_permalink( get_page_by_path('studio')->ID ); ?>" class="button button-footer">イベント一覧<small class="category-color">ALL SEARCH</small></a>
 								</div>
 							</div>
 						</footer>
